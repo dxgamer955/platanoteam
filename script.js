@@ -66,7 +66,7 @@ window.onload = function() {
   // Random Background header 1
   var randomBG = document.getElementsByClassName("fancy-header")[0];
   //var images = ['sources/home-img-purple.png', 'sources/beaver.jpg', 'sources/web-vid1.gif', 'sources/home-img-green.png'];
-  var images = ['sources/web-vid1.gif'];
+  var images = ['sources/web-vid1-smaller.gif'];
   var imgCount = images.length;
   var number = Math.floor(Math.random() * imgCount);
   randomBG.style.backgroundImage = 'url(' + images[number] + ')';
