@@ -278,9 +278,6 @@ nav {
   z-index: 100000;
 }
 
-
-
-
 .Nav-list{
   display: flex;
   justify-content: space-between;
@@ -394,27 +391,25 @@ nav {
     transform: translateY(-8px) rotate(-45deg);
   }
 
+  
   .Nav-list{
     position: fixed;
     flex-direction: column;
     background-color: rgba(2, 19, 22, 1);
-    top: 500%;
-    left: -100%;
+    top: 520px;
+    left: 100%;
     right: 0%;
-    padding-left: 0%;
-    padding-right: 0%;
     width: 100%;
-    height: 900%;
-    margin-top: 0%;
-    margin-bottom: 0%;
+    height: 2500%;
     transition: left 0.3s;
     
   }
+  
 
   .Nav-list.active{
     position: fixed;
     flex-direction: column;
-    top: 90px;
+    top: 40px;
     left: 0%;
     padding-left: 0%;
     padding-right: 0%;
@@ -425,10 +420,11 @@ nav {
     margin-bottom: 0%;
     transition: left 0.3s;
   }
+  
 
   #Top-Options{
     margin-bottom: 5%;
-    font-size: 40px;
+    font-size: 30px;
     transition: 0.3s;
   }
 
@@ -814,26 +810,12 @@ border-top: 2px solid;
 border-color: #37A949;
 }
 
-/*
-.member-box{
-  display: block;
-  justify-items: center;
-  margin: auto;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  border: 4px solid;
-  border-color: #37A949;
-  border-radius: 15px;
-  width: 75%;
-}
-*/
-
 
 /*Blur Animation*/
 .members{
   opacity: 0;
   filter: blur(5px);
-  transition: all 5s;
+  transition: all 2s;
 }
 
 
