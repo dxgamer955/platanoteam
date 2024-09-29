@@ -1,0 +1,259 @@
+
+  .imgs-img-W {
+    border-radius: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 100%;
+    height: auto;
+    transition: 0.5s;
+    float: left;
+    animation: fade-logo 1.5s;
+  }
+
+  .dl-title{
+    transition: all 2s;
+    margin-top: 8% !important;
+    margin-bottom: 6% !important;
+    width: 30% !important;
+  }
+
+  .dl-title:hover{
+    transition: all 2s;
+    transform: scale(1.1);
+  }
+
+  .dl-side-fade-left {
+      border-radius: 5px;
+      position: fixed;
+      left: 0px;
+  
+      transition: 0.5s;
+      float: left;
+      animation: fade-logo 1.5s;
+    }
+  
+
+    .dl-side-fade-right {
+        border-radius: 5px;
+        position: fixed;
+        right: 0px;
+  
+        transition: 0.5s;
+        float: left;
+        animation: fade-logo 1.5s;
+      }
+    
+      .dl-footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+        text-align: center;
+        height: 75px;
+        margin: auto;
+      }
+
+      .dl-flyer{
+        width: 75%;
+      }
+
+      .ArtTitle-W-DL{
+        font-size: x-large;
+      }
+      .ArtCont-W-DL{
+        font-size: medium;
+      }
+
+      .dl-cleo-hm{
+        width: 50%;
+        height: auto;
+      }
+
+  /* ON MOBILE SIDE FADES 1200px*/
+  @media(max-width: 1200px) {
+
+    .dl-title{
+      transition: all 2s;
+      margin-top: 12% !important;
+      margin-bottom: 6% !important;
+      width: 40% !important;
+    }
+
+    .dl-side-fade-left {
+        border-radius: 5px;
+        position: fixed;
+        left: 0px;
+        width: 20%;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        height: auto;
+        transition: 0.5s;
+        float: left;
+        animation: fade-logo 1.5s;
+      }
+      .dl-side-fade-right {
+        border-radius: 5px;
+        position: fixed;
+        right: 0px;
+        width: 20%;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        height: auto;
+        transition: 0.5s;
+        float: left;
+        animation: fade-logo 1.5s;
+      }
+
+      .dl-footer {
+        position: fixed;
+        width: 100%;
+        background-color: black;
+        text-align: center;
+        height: 75px;
+        margin: auto;
+      }
+      .dl-txt-footer{
+        margin-top: 30px;
+        width: 100%;
+        text-align: center;
+      }
+      /*
+      .ArtTitle-W-DL{
+        margin-top: 5%;
+        font-size: large;
+      }
+      .ArtCont-W-DL{
+        font-size: large;
+        margin-bottom: 500px;
+      }
+      */
+    
+      .dl-flyer{
+        margin-top: 5%;
+        width: 100%;
+        height: auto;
+      }
+
+      .dl-cleo-hm{
+        width: 64%;
+        height: auto;
+      }
+  }
+
+  /* ON MOBILE 900px*/
+  @media(max-width: 900px) {
+    .dl-title{
+      transition: all 2s;
+      margin-top: 22% !important;
+      margin-bottom: 6% !important;
+      width: 40% !important;
+    }
+  }
+
+/* ON MOBILE SIDE FADES 600px*/
+@media(max-width: 600px) {
+  .CheckOut {
+    width: auto;
+    height: auto;
+    border-radius: 0%;
+    background-color: #39473a;
+    text-align: center;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+  }
+
+  .imgs-img-W {
+    border-radius: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 100%;
+    height: auto;
+    transition: 0.5s;
+    float: left;
+    animation: fade-logo 1.5s;
+  }
+
+  .dl-title{
+    transition: all 1s;
+    margin-top: 22% !important;
+    margin-bottom: 40px !important;
+    width: 50% !important;
+  }
+
+  .dl-side-fade-left {
+      border-radius: 5px;
+      position: fixed;
+      left: 0px;
+      width: 20%;
+      
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      transition: 0.5s;
+      float: left;
+      animation: fade-logo 1.5s;
+    }
+
+    .dl-side-fade-right {
+      border-radius: 5px;
+      position: fixed;
+      right: 0px;
+      width: 20%;
+
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      height: auto;
+      transition: 0.5s;
+      float: left;
+      animation: fade-logo 1.5s;
+    }
+
+  .dl-footer {
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    height: 75px;
+    margin: auto;
+  }
+  .dl-txt-footer{
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+  }
+
+  
+  .ArtTitle-W-DL{
+    margin-top: 10%;
+    font-size: large;
+  }
+  
+  .ArtCont-W-DL{
+    font-size: medium;
+  }
+  
+
+  .dl-flyer{
+    margin-top: 16px;
+    width: 100%;
+    height: auto;
+  }
+
+  .dl-cleo-hm{
+    width: 75%;
+    height: auto;
+  }
+
+
+}
+

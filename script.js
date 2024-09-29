@@ -46,18 +46,31 @@ dots[slideIndex - 1].className += " active";
 
 
 
+// Función para manejar el menú de hamburguesas
+function handleBurgerMenu(cheeseburger, NavList) {
+  cheeseburger.addEventListener("click", () => {
+    cheeseburger.classList.toggle("active");
+    NavList.classList.toggle("active");
+  });
+
+  document.querySelectorAll(".Top-Options").forEach(n => n.addEventListener("click", () => {
+    cheeseburger.classList.remove("active");
+    //NavList.classList.remove("active");
+  }));
+}
+
 // cheeseburger
 const cheeseburger = document.querySelector(".cheeseburger");
 const NavList = document.querySelector(".Nav-list");
+handleBurgerMenu(cheeseburger, NavList);
 
-cheeseburger.addEventListener("click",() =>{
-  cheeseburger.classList.toggle("active");
-  NavList.classList.toggle("active");
-})
-document.querySelectorAll("#Top-Options").forEach(n => n.addEventListener("click",() =>{
-  cheeseburger.classList.remove("active");
-  //NavList.classList.remove("active");
-}))
+// cheeseburger-Racimos
+//const cheeseburgerR = document.querySelector(".cheeseburger-Racimos");
+//const NavListR = document.querySelector(".Nav-list-Racimos");
+//handleBurgerMenu(cheeseburgerR, NavListR);
+
+
+
 
 
 
@@ -74,7 +87,7 @@ window.onload = function() {
 
 
 
-// About Us animation
+// ANIMATION
 const observer = new IntersectionObserver((entries)=>{
   entries.forEach((entry)=>{
     if (entry.isIntersecting){
@@ -87,3 +100,29 @@ const observer = new IntersectionObserver((entries)=>{
 
 const hiddenElements = document.querySelectorAll('.members');
 hiddenElements.forEach((el)=>observer.observe(el));
+
+
+//document.body.onscroll
+
+
+
+// Gallery
+
+document.querySelectorAll('.gallery-image img').forEach(image =>
+  {
+      image.onclick = () =>
+      {
+          document.querySelector('.gallery-popup').style.display = 'block';
+          document.querySelector('.gallery-popup img').src = image.getAttribute('src');
+      }
+  });
+  
+  document.querySelector('.gallery-popup span').onclick = () =>
+  {
+      document.querySelector('.gallery-popup').style.display = 'none';    
+  }
+  
+  document.querySelector('.gallery-popup').onclick = () =>
+  {
+      document.querySelector('.gallery-popup').style.display = 'none';    
+  }
