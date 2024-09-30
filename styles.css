@@ -269,10 +269,10 @@
 
 .parallax {
 	background-image: url('sources/home-img-purple.png');
-  height: 100vh;
-  overflow-y: auto;
+  height: 940px;
+  /*overflow-y: auto;
   overflow-x: hidden;
-  perspective: 10px;
+  perspective: 10px;*/
 }
 
 .foreground {
@@ -299,7 +299,7 @@
   
   .parallax {
     background-image: url('sources/home-img-purple.png');
-    height: 100vh;
+    height: 940px;
     overflow-y: auto;
     overflow-x: hidden;
     perspective: 10px;
