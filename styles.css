@@ -1424,6 +1424,20 @@ border-color: #37A949;
   margin-bottom: 0%;
 }
 /* ON MOBILE WHATIS*/
+@media(max-width: 900px) {
+  .WhatIs {
+    width: 95%;
+    border-radius: 3%;
+    height: auto;
+    background-color: #1b1b20;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+  }
+}
+
 @media(max-width: 600px) {
   .WhatIs {
     width: 100%;
@@ -1670,6 +1684,22 @@ border-color: #37A949;
   margin-top: 1%;
   margin-bottom: 0%;
 }
+
+@media(max-width: 900px) {
+  .CheckOut {
+    width: 95%;
+    height: auto;
+    border-radius: 3%;
+    background-color: #39473a;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+  }
+  
+}
+
 /* ON MOBILE CHECK OUT */
 @media(max-width: 600px) {
   .CheckOut {
