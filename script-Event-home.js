@@ -73,7 +73,7 @@ handleBurgerMenu(cheeseburger, NavList);
 
 
 
-
+/*
 // Random Background header 1
 window.onload = function() {
   // Random Background header 1
@@ -84,7 +84,7 @@ window.onload = function() {
   var number = Math.floor(Math.random() * imgCount);
   randomBG.style.backgroundImage = 'url(' + images[number] + ')';
 };
-
+*/
 
 
 // ANIMATION
