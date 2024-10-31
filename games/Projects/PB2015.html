@@ -1,0 +1,178 @@
+<html>
+<head>
+    <link rel="stylesheet" href="DSEMU.css">
+    
+    <style>
+        #arcade-container {
+            display: flex; /* Usar flexbox para el contenedor principal */
+            /*justify-content: center; /* Centrar los elementos horizontalmente */
+            /*align-items: center; /* Centrar los elementos verticalmente */
+            flex-direction: column; /* Apilar elementos verticalmente */
+            margin: 0 auto; /* Centrar el contenedor en la página */
+            border-radius: 16px;
+            width: 1048px;
+            height: 1300px;
+            /*background-color: rgb(28, 28, 34);*/
+            background-color: rgb(51, 51, 90);
+            box-sizing: border-box;
+            margin-top: 50%;
+            margin-bottom: 5%;
+        }
+
+        #player{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #controls {
+            display: flex; /* Usar flexbox para los controles */
+            justify-content: center; /* Centrar los controles */
+            align-items: center; /* Alinear los controles al inicio */
+            width: 100%; /* Tomar todo el ancho disponible */
+            margin-top: 20px; /* Espacio superior */
+        }
+
+        #player-container {
+            display: flex;
+            justify-content: center; /* Centrar el emulador */
+            align-items: center;
+            transition: width 0.3s; /* Animación suave para el cambio de tamaño */
+            margin-left: 12%;
+            margin-right: 16%;
+            width: 300px;
+            margin-bottom: 64px;
+            margin-top: 40px;
+        }
+
+        .button-container {
+            display: flex; /* Usar flexbox para los botones */
+            flex-direction: column; /* Colocar botones en columna */
+            align-items: center; /* Alinear al centro */
+        }
+
+        .info-container {
+            margin-left: 20px; /* Espacio a la izquierda */
+            flex-grow: 1; /* Hacer que la sección de info crezca */
+            width: auto;
+        }
+
+        .G-Banner{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .center-banner{
+            display: flex;
+            justify-content: center;
+            align-items: flex-star;
+            position: relative;
+            height: 400px;
+            margin-bottom: 3%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div style="position: relative; display: flex; width: 100%; height: 500px; background-color: aqua;"><span style="position: relative; display: flex; height: 200px;">THIS IS A SECRET! DON'T TELL ANYBODY!</span></div>
+    
+    <nav>
+        <div class="NavBar">
+            <a href="/./././index.html">
+		
+                <!--<img src="sources/CompLogo.png" alt="ptlogo" class="pgLogo">--->
+                <!--<img src="sources/Logo-2024-250.png" alt="ptlogo" class="PTLogo2">-->
+                <img src="/sources/Simple-Name-SMALL-V2-2024.png" alt="ptlogo" class="pgLogo">
+            </a>
+        <div class="openMenu"><i class="fa fa-bars"></i></div>
+        <ul class="Nav-list">
+          <li><a href="/./././index.html" id="Top-Options">Home</a></li>
+          <li><a href="/./././games.html" id="Top-Options">Games</a></li>
+          <!--<li><a href="images.html" id="Top-Options">Images</a></li>-->
+          <!--<li><a href="videos.html" id="Top-Options">Videos</a></li>-->
+          <li><a href="/./././gallery.html" id="Top-Options">Gallery</a></li>
+          <li><a href="/./././projects.html" class="active" id="Top-Options">Projects</a></li>
+          <li><a href="/./././about-us.html" id="Top-Options">About Us</a></li>
+        </ul>
+        <div class="cheeseburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+      </nav>
+
+
+<!-- The Player Itself -->
+<div class="arcade-bg">
+    <div id="arcade-container">
+        <div class="center-banner">
+        <img src="PTDSG-IMGS/PB2015-BNR.png" class="G-Banner">
+        </div>
+        <div id="center-all" style="display: flex; justify-content: center; padding: 5%;">
+
+        <!-- Controls Section -->
+        <div id="controls">
+            
+            
+            <!-- Emulator Player -->
+            <div id="player-container">
+                <desmond-player id="player" 
+                                style="display: flex; justify-content: center; align-items: center; 
+                                       transform: scale(2); 
+                                       image-rendering: pixelated;
+                                       ">
+                </desmond-player>
+            </div>
+
+            <!-- How To Play Section -->
+            <div class="info-container">
+                <h1 style="margin-top: 0%; margin-bottom: 25%; text-align: center;">Project Beta 2015</h1>
+                <h2 style="margin-bottom: 2%; margin-top: 2%;">How To Play:</h2>
+                <p>Use the following keys to control your character:</p>
+                <ul>
+                    <li><strong>Arrow Keys</strong> - Move</li>
+                    <li><strong>X</strong> - A Button</li>
+                    <li><strong>Z</strong> - B Button</li>
+                    <li><strong>S</strong> - X Button</li>
+                    <li><strong>A</strong> - Y Button</li>
+                    <li><strong>Enter</strong> - Start</li>
+                    <li><strong>Shift</strong> - Select</li>
+                    <li><strong>Q</strong> - L Button</li>
+                    <li><strong>W</strong> - R Button</li>
+                </ul>
+                <p>Objective: Complete each level by tapping all Jovani Vazquez!</p>
+                <div style="position: relative; display: flex; justify-content: center; margin-top: 10%;">
+                    <!--<a><button>Download</button></a>-->
+                    <iframe frameborder="0" src="https://itch.io/embed/2041315?border_width=5&amp;bg_color=33335a&amp;fg_color=ffffff&amp;link_color=FFE700&amp;border_color=000000" width="216" height="175"><a href="https://platanoteam.itch.io/project-beta">Project BETA by dxgamer955</a></iframe>
+                </div>
+                <p style="text-align: center; margin-top: 20%; margin-bottom: 0%;">Release Year: 2022</p>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</div>
+<iframe frameborder="0" src="https://itch.io/embed/2041315?border_width=5&amp;bg_color=33335a&amp;fg_color=ffffff&amp;link_color=FFE700&amp;border_color=000000" width="560" height="175"><a href="https://platanoteam.itch.io/project-beta">Project BETA by dxgamer955</a></iframe>
+
+<script>
+window.onload = function(){
+    document.getElementById("player").loadURL("./PTDSG/PB2015.nds"); 
+}
+</script>
+
+<script src="desmond.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/gh/Unzor/desmond/cdn/desmond.min.js"></script>-->
+
+	<!-- Footer -->
+	<footer>
+		<p style="display: flex; position: relative; justify-content: center; align-items: center; height: 50px;">&copy; Copyright 2015-2024 Platano Team. All Rights Reserved</p>
+        <p class="made-with"> </p>
+	</footer>
+
+
+</body>
+</html>

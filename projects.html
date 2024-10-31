@@ -1,28 +1,166 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Projets</title>
+	<title>Projects</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="sources/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;500&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-     
+
+    <style>
+
+    /* GAMES */
+
+/*  GALLERY  */
+
+.projects-image {
+  transform: scale(0.9);
+  transition: 0.5s;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: 85%;
+}
+
+
+.projects-image:hover {
+  transform: scale(1);
+}
+
+.projects-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+}
+
+.projects-container .projects-image
+{
+    cursor: pointer;
+}
+
+
+.projects-container .projects-image img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/* ON MOBILE GAME GALLERY */
+@media(max-width: 600px) {
+  .projects-image {
+    transform: scale(1);
+    transition: 0.5s;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media(max-width: 900px) {
+  .projects-image {
+    transform: scale(1);
+    transition: 0.5s;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+/*GAME TITLES*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.projects-container, .projects-container-on-mobile
+{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-top: 3%;
+}
+
+
+@media only screen and (max-width: 800px)
+{
+  .projects-container, .projects-container-on-mobile { grid-template-columns: auto auto; }
+}
+@media only screen and (max-width: 1400px)
+{
+  .projects-container, .projects-container-on-mobile {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-row-gap: 0px;
+    grid-column-gap: 0px;}
+}
+@media only screen and (max-width: 500px)
+{
+  .projects-container, .projects-container-on-mobile { grid-template-columns: auto auto auto; }
+}
+@media only screen and (max-width: 750px)
+{
+  .projects-container, .projects-container-on-mobile {
+    display: grid;
+    grid-template-columns: auto;
+    grid-row-gap: 30px;
+    grid-column-gap: 8px;}
+}
+
+/* ON MOBILE WHAT-IS-TITLE*/
+@media(max-width: 600px) {
+  .projects-container-on-mobile
+  {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 10px;
+    grid-column-gap: 8px;
+  }
+}
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+  <a href="index.html">
+    <img src="sources/Simple-Name-SMALL-V2-2024.png" alt="ptlogo" class="pgLogo">
+    </a>
+  <div class="fancy-blur">
 	<header class="fancy-header4">
+    </div>
             <!--- Header nav bar--->
-            <a href="index.html">
-            <img src="sources/CompLogo.png" alt="ptlogo" class="pgLogo">
-            </a>
             <nav>
             <div class="NavBar">
             <div class="openMenu"><i class="fa fa-bars"></i></div>
             <ul class="Nav-list">
               <li><a href="index.html" id="Top-Options">Home</a></li>
-              <li><a href="images.html" id="Top-Options">Images</a></li>
-              <li><a href="videos.html" id="Top-Options">Videos</a></li>
+              <li><a href="games.html" id="Top-Options">Games</a></li>
+              <!--<li><a href="images.html" id="Top-Options">Images</a></li>-->
+              <!--<li><a href="videos.html" id="Top-Options">Videos</a></li>-->
+              <li><a href="gallery.html" id="Top-Options">Gallery</a></li>
               <li><a href="projects.html" class="active" id="Top-Options">Projects</a></li>
               <li><a href="about-us.html" id="Top-Options">About Us</a></li>
             </ul>
@@ -35,68 +173,45 @@
           </nav>
           </div>
         <!---End of Header nav bar--->
-        <script src="script.js"></script>
+        <!--<script src="script.js"></script>-->
 <div class="header-content">
     <h1 class="Title">Projects</h1>
-    <p class="SubTitle">Just Projects</p>
+		<p class="SubTitle">Hand Crafted Games</p>
 </div>
 </header>
 
 <!--Posts-->
 	<main>
-		<article class="article">
-			<header>
-				<h2 class="ArtTitle">Jovani Vazquez: The Game</h2>
-				<p class="post-meta">Posted on <time datetime="2023-02-17">February 17, 2023</time> by <a href="#">dxgamer955</a></p>
-			</header>
-                <div class="projects-div">
-                    <img class="projects-img" src="sources/jovanivazquezthegame.png">
-                </div>
-                <p class="post-meta">This is a small project that I did in my free time at the Home.</p>       
-		</article>
+    <article class="article-games">
+      <h1 class="What-is-Title">dxgamer955's Projects</h1>
+    <div class="projects-container">
+      
+        <div class="projects-image"><a href="/games/Projects/JVTGDS.html"><img src="/games/Projects/PTDSG-IMGS/CARDS/JOVA CARD.png"></a></div>
+        <div class="projects-image"><a href="/games/Projects/PB2015.html"><img src="/games/Projects/PTDSG-IMGS/CARDS/PB2015 CARD.png"></a></div>
 
-		<article class="article">
-			<header>
+        </div>
+    </div>
+  </article>
 
+  <article class="article-games">
+    <h1 class="What-is-Title">In Develpment...</h1>
+  <div class="projects-container">
+    
+      <div class="projects-image"><a href="projects.html"><img src="/games/Projects/PTDSG-IMGS/CARDS/PANCHO CARD.png"></a></div>
+      <div class="projects-image"><a href="projects.html"><img src="/games/Projects/PTDSG-IMGS/CARDS/BEAVER CARD.png"></a></div>
+      <div class="projects-image"><a href="projects.html"><img src="/games/Projects/PTDSG-IMGS/CARDS/GUITA CARD.png"></a></div>
+      <div class="projects-image"><a href="projects.html"><img src="/games/Projects/PTDSG-IMGS/CARDS/DL CARD.png"></a></div>
 
+      </div>
+  </div>
+</article>
+  <script src="script.js"></script>
+  <script src="animation.js"></script>
 
-
-
-				<h2 class="ArtTitle">Jovanni's Azul</h2>
-				<p class="post-meta">Posted on <time datetime="2023-02-17">February 17, 2023</time> by <a href="#">dxgamer955</a></p>
-			</header>
-                <div class="projects-div">
-                    <img class="projects-img" src="sources/jovannibreakout.png">
-                </div>
-                <p class="post-meta">I did it for the memes.</p>  
-		</article>
-
-        <article class="article">
-			<header>
-				<h2 class="ArtTitle">The Beaver Hero DS Edition</h2>
-				<p class="post-meta">Posted on <time datetime="2023-02-17">February 17, 2023</time> by <a href="#">dxgamer955</a></p>
-			</header>
-                <div class="projects-div">
-                    <img class="projects-img" src="sources/tbhdse.png">
-                </div>
-                <p class="post-meta">Prototype made in 2021.</p>  
-		</article>
-
-        <article class="article">
-			<header>
-				<h2 class="ArtTitle">Test To The Future</h2>
-				<p class="post-meta">Posted on <time datetime="2023-02-17">February 17, 2023</time> by <a href="#">dxgamer955</a></p>
-			</header>
-                <div class="projects-div">
-                    <img class="projects-img" src="sources/tttf.png">
-                </div>
-                <p class="post-meta">First DS project made in 2021.</p>  
-		</article>
 
 	</main>
 	<footer>
-		<p>&copy; 2023 dxgamer955's DSGM Diary</p>
-        <p class="made-with">Made by dxgamer955 with help from ChatGPT</p>
+    <p>&copy; Copyright 2015-2024 Platano Team. All Rights Reserved</p>
         <p class="made-with"> </p>
 	</footer>
 </body>

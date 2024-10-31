@@ -805,10 +805,12 @@ nav {
 
 
   footer {
+    display: flex;
     text-align: center;
     margin-top: 5%;
     margin-bottom: 5%;
     background-color: #131316;
+    justify-content: center;
 
   }
 
