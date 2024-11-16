@@ -48,6 +48,7 @@
 
 <!--Posts-->
 	<main>
+
     <article class="article-Gallery">
     <div class="gallery-container">
         <div class="gallery-image"><img src="Gallery/jovarealpanchoreal.jpg">JVTGDS & PMDS Boxes</div>
@@ -73,6 +74,49 @@
         </div>
     </div>
   </article>
+
+
+
+<!--  Cards (Experimental) -->
+<!--
+  <article class="article-Gallery">
+    <h1 class="What-is-Title">Cards</h1>
+    <br>
+    <div class="gallery-container">
+      <div class="card">
+        <div class="content" style="background-position: center; background-size: cover; background-repeat: no-repeat; background-image: url('games/Cards/dl-card.png')">
+        </div>
+      </div>
+    </div>
+  </article>
+
+
+
+<script>
+ const card = document.querySelector('.card .content');
+
+card.addEventListener('mousemove', (e) => {
+const rect = card.getBoundingClientRect();
+const x = e.clientX - rect.left; // Mouse X relative to card
+const y = e.clientY - rect.top;  // Mouse Y relative to card
+
+// Invert rotation values
+const rotateX = ((y / rect.height) - 0.5) * -50; // Invert tilt up/down
+const rotateY = ((x / rect.width) - 0.5) * 50;  // Invert tilt left/right
+
+// Apply the inverted rotation
+card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+});
+
+card.addEventListener('mouseleave', () => {
+// Reset the card when the mouse leaves
+card.style.transform = 'rotateX(0) rotateY(0)';
+});
+</script>
+
+-->
+
+
     <div class="gallery-popup">
       <span class="gal-span"></span>
       <img src="sources/image3.png" alt="">
