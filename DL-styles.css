@@ -1,3 +1,7 @@
+  .main-content {
+    flex: 1; /* Ocupa el espacio restante entre el header y footer */
+  }
+
 
   .imgs-img-W {
     border-radius: 5px;
@@ -44,7 +48,7 @@
       }
     
       .dl-footer {
-        position: fixed;
+        position: relative;
         left: 0;
         bottom: 0;
         width: 100%;
@@ -110,7 +114,7 @@
       }
 
       .dl-footer {
-        position: fixed;
+        position: relative;
         width: 100%;
         background-color: black;
         text-align: center;
@@ -219,7 +223,7 @@
     }
 
   .dl-footer {
-    position: fixed;
+    position: relative;
     width: 100%;
     background-color: black;
     text-align: center;
@@ -255,5 +259,102 @@
   }
 
 
+}
+
+
+
+/*  PLAYER  */
+
+.player-container{
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center;    /* Centrar verticalmente */
+}
+
+.player {
+  background: #22192a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 55%;
+}
+
+audio {
+  width: 100%;               /* Ocupa todo el ancho disponible */  
+  padding: 10px;            
+}
+
+
+.current-track {
+  margin-bottom: 20px;
+}
+
+.controls button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #22192a;
+}
+
+.track-list {
+  list-style: none;
+  padding: 0;
+}
+
+.track-list li {
+  margin: 5px 0;
+  padding: 10px;
+  cursor: pointer;
+  background: #493a56;
+  border-radius: 5px;
+  color: #FCF1BA;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+.track-list li:hover {
+  background: #8a6c9a;
+}
+
+
+
+.dl-footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  height: 75px;
+  margin: auto;
+  color: white;
+}
+
+.DL-soundtrack-page-header-container {
+  display: flexbox;
+  position: relative;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  margin-bottom: 2cap;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background-color: #1b1b20;
+  justify-content: center;
+  align-items: center;
+}
+
+.DL-soundtrack-page-header {
+  display: flexbox;
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin: 0%;
 }
 
