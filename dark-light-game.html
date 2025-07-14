@@ -42,16 +42,60 @@
   <!---End of Header nav bar--->
 </header>
 
-<div  style="display: flex; position: absolute; justify-content: center; margin-top: 28%; margin-left: 15%;">
-  <iframe style="display: flex; position: relative; margin-left: auto; margin-right: auto; margin-bottom: auto; margin-top: auto;" src="https://store.steampowered.com/widget/3224490/" frameborder="0" width="646" height="190"></iframe>
-</div>
-
 <style>
   body{
     background-color: #1B0026;
     justify-content: center;
     text-align: center;
   }
+
+  .STEAM-WIDGET {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  width: 100%;
+  padding: 0 12px;
+}
+
+.steam-iframe {
+  width: 100%;
+  max-width: 646px;
+  height: 190px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .steam-iframe {
+    height: 150px;
+    max-width: 500px;
+  }
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+  .steam-iframe {
+    height: 130px;
+    max-width: 400px;
+  }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 400px) {
+  .steam-iframe {
+    height: 110px;
+    max-width: 340px;
+  }
+}
+  .dl-flyer {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 24px; /* espacio entre el flyer y el widget */
+}
   </style>
 
 <!--Posts-->
@@ -67,6 +111,9 @@
   <script src="animation.js"></script>
 	</main>
 
+<div class="STEAM-WIDGET">
+  <iframe class="steam-iframe" src="https://store.steampowered.com/widget/3224490/" frameborder="0"></iframe>
+</div>
 
   <!--
   <article class="CheckOut">
