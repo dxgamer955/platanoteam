@@ -1,0 +1,361 @@
+/* Platano Team Synthwave Zine — shared public visual system */
+:root{
+  --pt-night:#090811;--pt-night-2:#111021;--pt-panel:#151323;--pt-panel-2:#1a1729;
+  --pt-white:#fff8e8;--pt-muted:#bcb6c7;--pt-green:#48cf61;--pt-red:#df2632;
+  --pt-yellow:#f2da3b;--pt-violet:#7655df;--pt-blue:#3188f4;--pt-rule:#3e3a54;
+}
+html{background:var(--pt-night);scroll-behavior:smooth}
+body.synthwave-site{background:var(--pt-night);color:var(--pt-white);overflow-x:hidden}
+body.synthwave-site::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:radial-gradient(circle at 15% 10%,#281738 0,transparent 28%),radial-gradient(circle at 88% 78%,#0d2630 0,transparent 30%),var(--pt-night)}
+body.synthwave-site::after{content:"";position:fixed;inset:0;z-index:1000;pointer-events:none;opacity:.055;background:repeating-linear-gradient(to bottom,transparent 0 3px,#000 3px 4px)}
+.synthwave-site ::selection{background:var(--pt-green);color:#071009}
+.synthwave-site .shell{width:min(1240px,calc(100% - 48px))}
+
+/* Navigation: restrained arcade hardware */
+.synthwave-site .site-header{position:absolute!important;z-index:100;background:#0b0912f2!important;border-bottom:2px solid var(--pt-red)!important;color:var(--pt-white)!important;backdrop-filter:blur(12px)}
+.synthwave-site .site-header.scrolled{position:fixed!important;background:#0b0912f7!important;box-shadow:0 8px 30px #0008}
+.synthwave-site .navbar{max-width:none;height:76px;margin:0;display:grid;grid-template-columns:230px 1fr auto}
+.synthwave-site .brand{height:76px;display:grid;place-items:center;border-right:1px solid var(--pt-rule)!important}
+.synthwave-site .brand img{width:145px;filter:drop-shadow(0 0 7px #48cf6140)}
+.synthwave-site .archive-id{color:var(--pt-blue);text-shadow:0 0 9px #3188f477}
+.synthwave-site .nav-links{align-self:stretch;gap:0}
+.synthwave-site .nav-links li{display:flex}
+.synthwave-site .nav-links a{display:grid;place-items:center;min-width:82px;padding:0 17px;border-left:1px solid var(--pt-rule)!important;border-radius:0!important;color:var(--pt-white)!important;background:transparent!important;font:700 .66rem/1 "Courier New",monospace;letter-spacing:.06em;text-transform:uppercase}
+.synthwave-site .nav-links a:hover,.synthwave-site .nav-links a.active{background:var(--pt-green)!important;color:#071009!important;box-shadow:inset 0 -4px 0 var(--pt-yellow)}
+
+/* Shared synthwave stage */
+.synth-stage{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.synth-stage::before{content:"";position:absolute;inset:0;background-image:radial-gradient(#3188f4 1px,transparent 1px);background-size:31px 31px;opacity:.16}
+.synth-mountains{position:absolute;left:-3%;width:106%;height:33%;bottom:27%;filter:drop-shadow(0 0 4px #df263255)}
+.synth-mountains path{vector-effect:non-scaling-stroke;stroke-linejoin:round}
+.synth-mountains .back{fill:#251016;stroke:#9f1f29;stroke-width:3}
+.synth-mountains .front{fill:#150b11;stroke:var(--pt-red);stroke-width:3}
+.synth-grid{position:absolute;z-index:2;left:-22%;right:-22%;bottom:-14%;height:47%;perspective:440px;overflow:hidden}
+.synth-grid::before{content:"";position:absolute;inset:-12% -8%;transform-origin:50% 0;transform:rotateX(62deg) scale(1.2);background-image:linear-gradient(#2558b8 2px,transparent 2px),linear-gradient(90deg,var(--pt-blue) 2px,transparent 2px);background-size:52px 36px;filter:drop-shadow(0 0 5px #3188f4);animation:ptGridDrive 1.2s linear infinite}
+.synth-grid::after{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:var(--pt-blue);box-shadow:0 0 10px var(--pt-blue),0 0 25px #245fc9}
+@keyframes ptGridDrive{to{background-position:0 72px,0 72px}}
+.synth-hud{position:absolute;z-index:4;left:clamp(70px,7vw,130px);right:clamp(28px,6vw,100px);top:100px;display:flex;justify-content:space-between;color:var(--pt-blue);font:700 .58rem/1 "Courier New",monospace;letter-spacing:.18em;text-shadow:0 0 9px var(--pt-blue)}
+.synth-banana{position:absolute;z-index:1;width:min(54vw,850px);height:auto;aspect-ratio:900/650;left:34%;top:16%;opacity:.68;filter:drop-shadow(0 0 9px #53f27a) drop-shadow(0 0 24px #48cf61) drop-shadow(0 0 50px #3188f466)}
+
+.synthwave-site :is(.archive-hero,.games-hero,.projects-hero,.gallery-hero,.about-hero,.history-hero,.ds-hero){position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(180deg,#171027 0%,#100b1a 68%,#090811 100%)!important;border-bottom:2px solid var(--pt-red)!important;color:var(--pt-white)!important}
+.synthwave-site :is(.archive-hero,.games-hero,.projects-hero,.gallery-hero,.about-hero,.history-hero,.ds-hero)>:not(.synth-stage):not(.synth-hud):not(.synth-banana){position:relative;z-index:3}
+.synthwave-site :is(.games-hero-content,.projects-hero-content,.gallery-hero-content,.about-hero-content,.history-hero-content,.ds-hero-content){border-left:8px solid var(--pt-green)!important}
+.synthwave-site :is(.archive-hero-copy,.games-hero-content,.projects-hero-content,.gallery-hero-content,.about-hero-content,.history-hero-content,.ds-hero-content) h1{text-shadow:4px 4px 0 #321c50}
+.synthwave-site :is(h1,h2) em{color:var(--pt-yellow)!important;text-shadow:2px 2px 0 var(--pt-red)}
+.synthwave-site :is(.file-code,.eyebrow,.section-label,.kicker){color:var(--pt-blue)!important;text-shadow:0 0 7px #3188f455}
+
+/* Home: Dark Light remains the primary current file */
+.synthwave-site.archive-home .archive-hero{grid-template-columns:58px minmax(390px,.88fr) minmax(500px,1.12fr);background:linear-gradient(180deg,#171027,#090811)!important}
+.synthwave-site .archive-rail{background:#100f1c!important;color:var(--pt-yellow)!important;border-color:var(--pt-red)!important}
+.synthwave-site .archive-hero-copy h1{color:var(--pt-white);text-shadow:5px 5px 0 #321c50}
+.synthwave-site .archive-hero-copy h1 em{color:var(--pt-yellow)!important;text-shadow:3px 3px 0 var(--pt-red)}
+.synthwave-site .archive-hero-copy>p:not(.file-code){color:var(--pt-muted)}
+.synthwave-site .archive-button{border-color:var(--pt-white)!important}
+.synthwave-site .archive-button.ink{background:var(--pt-green)!important;color:#071009!important;border-color:var(--pt-green)!important;box-shadow:7px 7px 0 var(--pt-red)}
+.synthwave-site .archive-button.paper{background:#11101de6!important;color:var(--pt-white)!important}
+.synthwave-site .archive-button:hover{background:var(--pt-yellow)!important;color:#111!important;box-shadow:7px 7px 0 var(--pt-blue)!important}
+.synthwave-site .current-file{z-index:5!important;border-color:var(--pt-white)!important;background:#090811!important;color:var(--pt-white)!important;box-shadow:12px 12px 0 var(--pt-green),0 0 35px #3188f433!important;transform:rotate(1deg)}
+.synthwave-site .current-file::before{content:"FEATURED / DARK LIGHT";position:absolute;z-index:8;top:-26px;right:18px;padding:9px 12px;background:var(--pt-yellow);color:#111;font:700 .58rem/1 "Courier New",monospace;letter-spacing:.08em}
+.synthwave-site .file-tab,.synthwave-site .current-art,.synthwave-site .file-tab b{border-color:var(--pt-white)!important}
+.synthwave-site .current-art span{background:var(--pt-green)!important}
+.synthwave-site .file-caption>a{color:var(--pt-yellow)!important;border-color:var(--pt-yellow)!important}
+.synthwave-site .archive-ticker{z-index:5!important;background:#130d1d!important;color:var(--pt-blue)!important;border-color:var(--pt-red)!important;box-shadow:inset 0 0 24px #7655df18}
+
+/* Professional content system with playful zine accents */
+.synthwave-site :is(.studio-record,.game-files,.workbench-note,.catalog,.project-group,.beta-section,.gallery-section,.story,.team-section,.logo-history,.timeline-section,.history-principles,.intro,.quick-info,.selected,.notes,.skills,.github-work,.professional,.history,.contact,.play-section){background:var(--pt-night)!important;color:var(--pt-white)!important}
+.synthwave-site .studio-record{border-color:var(--pt-rule)!important}
+.synthwave-site .record-stamp{background:#151323!important;border-color:var(--pt-rule)!important}
+.synthwave-site .record-stamp img{filter:drop-shadow(7px 7px 0 #48cf6155)}
+.synthwave-site .record-data,.synthwave-site .record-data div{border-color:var(--pt-rule)!important}
+.synthwave-site .record-data dt{color:var(--pt-yellow)}
+.synthwave-site .game-files{background:#07070d!important}
+.synthwave-site .files-heading,.synthwave-site .file-list,.synthwave-site .game-file{border-color:var(--pt-rule)!important}
+.synthwave-site .game-file:hover{background:#151d1a!important;color:var(--pt-white)!important;box-shadow:inset 5px 0 0 var(--pt-green)}
+.synthwave-site .workbench-note{background:#151323!important;border-color:var(--pt-red)!important}
+.synthwave-site .workbench-note>a{background:var(--pt-green)!important;color:#071009!important;border-color:var(--pt-green)!important;box-shadow:6px 6px 0 var(--pt-red)}
+
+/* Cards, panels and section records */
+.synthwave-site :is(.catalog-card,.project-card,.beta-card,.wip-card,.gallery-item,.values,.team-card,.logo-card,.principles-grid article,.case-study,.notes-grid>div,.skill-card,.repo-card,.history-list>div,.arcade-panel,.game-info,.control-grid div){background:var(--pt-panel)!important;border-color:var(--pt-rule)!important;color:var(--pt-white)!important;border-radius:0!important}
+.synthwave-site :is(.catalog-grid,.project-grid,.wip-grid,.logo-grid,.principles-grid,.skill-grid,.repo-grid){border-color:var(--pt-rule)!important}
+.synthwave-site :is(.catalog-card,.project-card,.wip-card,.team-card,.logo-card,.skill-card,.repo-card,.gallery-item){transition:transform .2s,border-color .2s,box-shadow .2s}
+.synthwave-site :is(.catalog-card,.project-card,.wip-card,.team-card,.logo-card,.skill-card,.repo-card,.gallery-item):hover{transform:translate(-4px,-4px)!important;border-color:var(--pt-blue)!important;box-shadow:5px 5px 0 var(--pt-red)!important}
+.synthwave-site :is(.catalog-heading,.project-heading,.gallery-heading,.story-grid,.plain-heading,.selected-header,.play-heading){border-color:var(--pt-rule)!important}
+.synthwave-site :is(.games-cta,.about-cta,.history-cta,.contact){background:#151323!important;border-color:var(--pt-red)!important;box-shadow:8px 8px 0 #251016}
+.synthwave-site :is(.games-cta,.about-cta,.history-cta){border:0!important;outline:0!important;box-shadow:none!important}
+.synthwave-site .timeline-section{background:#0d0c16!important}
+.synthwave-site .timeline-dot{background:var(--pt-green)!important;box-shadow:0 0 0 6px #0d0c16,0 0 18px var(--pt-green)!important}
+.synthwave-site .timeline-entry{border-color:var(--pt-rule)!important}
+.synthwave-site .gallery-item img{filter:saturate(.92) contrast(1.03)!important}
+.synthwave-site .gallery-item:hover img{filter:saturate(1.15) contrast(1.04)!important}
+.synthwave-site .button.primary,.synthwave-site .button.dark{background:var(--pt-green)!important;color:#071009!important;border-color:var(--pt-green)!important;box-shadow:5px 5px 0 var(--pt-red)!important}
+.synthwave-site .button:hover{background:var(--pt-yellow)!important;color:#111!important;border-color:var(--pt-yellow)!important;box-shadow:5px 5px 0 var(--pt-blue)!important}
+.synthwave-site .text-link,.synthwave-site .underlined-link{color:var(--pt-yellow)!important}
+
+/* DS pages: emulator functionality stays untouched */
+.synthwave-site.page-ds{--project-accent:var(--pt-green)!important}
+.synthwave-site.page-ds .ds-hero:before{background:#0b0912b8!important}
+.synthwave-site.page-ds .project-tags span{background:#11101d!important;border:1px solid var(--pt-blue)!important;color:var(--pt-white)!important}
+.synthwave-site.page-ds .arcade-panel{box-shadow:9px 9px 0 #251016,0 0 28px #3188f42b!important}
+.synthwave-site.page-ds .emulator-shell{background:#050509!important;border:0!important;outline:0!important;box-shadow:none!important}
+.synthwave-site.page-ds .back-link{color:var(--pt-yellow)!important}
+
+/* Footer and legal documents */
+.synthwave-site footer{background:#08070d!important;color:#9d97aa!important;border-top:2px solid var(--pt-red)!important}
+.synthwave-site footer img{filter:drop-shadow(0 0 7px #48cf6144)}
+.synthwave-site footer a:hover{color:var(--pt-green)!important}
+.archive-legal.synthwave-site{background:var(--pt-night)!important;color:var(--pt-muted)!important}
+.archive-legal.synthwave-site .legal-topbar{background:#0b0912f7;border-color:var(--pt-red)}
+.archive-legal.synthwave-site .legal-topbar>a:first-child{border-color:var(--pt-rule)}
+.archive-legal.synthwave-site .legal-topbar>a:last-child{color:var(--pt-green);border-color:var(--pt-rule)}
+.archive-legal.synthwave-site ul{border-color:var(--pt-green)}
+.archive-legal.synthwave-site a{color:#70df83}
+
+@media(max-width:1050px){.synth-banana{width:70vw;left:25%;top:22%}.synth-hud{display:none}.synthwave-site.archive-home .archive-hero{grid-template-columns:50px 1fr}.synthwave-site .current-file{transform:none}}
+@media(max-width:800px){
+ body.synthwave-site::after{opacity:.035}.synthwave-site .navbar{height:68px;grid-template-columns:165px 1fr auto}.synthwave-site .brand{height:68px}.synthwave-site .menu-toggle{display:grid;margin-right:12px;border:1px solid var(--pt-rule)!important;border-radius:0!important;background:#0b0912!important}.synthwave-site .menu-toggle span{background:var(--pt-white)!important}.synthwave-site .nav-links{top:68px;left:0;right:0;padding:0;background:#0b0912!important;border:1px solid var(--pt-rule)!important;border-radius:0!important}.synthwave-site .nav-links li{display:block}.synthwave-site .nav-links a{display:block;padding:17px 20px;border:0!important;border-bottom:1px solid var(--pt-rule)!important}.synth-mountains{height:25%;bottom:31%}.synth-grid{height:36%;bottom:-8%}.synth-banana{width:115vw;left:-5%;top:30%;opacity:.42}.synthwave-site :is(.games-hero-content,.projects-hero-content,.gallery-hero-content,.about-hero-content,.history-hero-content,.ds-hero-content){border-left-width:5px!important}.synthwave-site .current-file::before{top:-22px;right:10px}.synthwave-site .shell{width:min(100% - 30px,1240px)}
+}
+@media(max-width:520px){.synthwave-site .archive-id{display:none}.synthwave-site .navbar{grid-template-columns:150px 1fr}.synthwave-site .menu-toggle{justify-self:end}.synth-grid{opacity:.72}.synth-mountains{opacity:.72}.synth-banana{top:35%;opacity:.34}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.synth-grid::before{animation:none!important}.synth-banana{display:none}.synthwave-site *{scroll-behavior:auto!important}}
+
+
+/* Content legibility and page-specific rhythm */
+.synthwave-site main :is(h1,h2,h3,h4,strong){color:var(--pt-white)}
+.synthwave-site main p:not(.file-code):not(.eyebrow):not(.kicker){color:var(--pt-muted)}
+.synthwave-site main :is(small,.meta,.release-meta,.emulator-note){color:#918b9c}
+.synthwave-site .section-label{color:var(--pt-blue)!important}
+.synthwave-site .section-label span{color:var(--pt-green)!important}
+.synthwave-site .catalog-card:nth-child(5n+1),.synthwave-site .skill-card:nth-child(5n+1){border-top-color:var(--pt-green)!important}
+.synthwave-site .catalog-card:nth-child(5n+2),.synthwave-site .skill-card:nth-child(5n+2){border-top-color:var(--pt-yellow)!important}
+.synthwave-site .catalog-card:nth-child(5n+3),.synthwave-site .skill-card:nth-child(5n+3){border-top-color:var(--pt-red)!important}
+.synthwave-site .catalog-card:nth-child(5n+4),.synthwave-site .skill-card:nth-child(5n+4){border-top-color:var(--pt-blue)!important}
+.synthwave-site .catalog-card:nth-child(5n),.synthwave-site .skill-card:nth-child(5n){border-top-color:var(--pt-violet)!important}
+.synthwave-site.page-gallery .gallery-grid{background:radial-gradient(circle at 50% 0,#1c1730,transparent 48%)}
+.synthwave-site.page-gallery .gallery-item:nth-child(3n+1):hover{box-shadow:5px 5px 0 var(--pt-green)!important}
+.synthwave-site.page-gallery .gallery-item:nth-child(3n+2):hover{box-shadow:5px 5px 0 var(--pt-yellow)!important}
+.synthwave-site.page-gallery .gallery-item:nth-child(3n):hover{box-shadow:5px 5px 0 var(--pt-blue)!important}
+.synthwave-site.page-history .timeline-entry:nth-child(even) .timeline-dot{background:var(--pt-yellow)!important;box-shadow:0 0 0 6px #0d0c16,0 0 18px var(--pt-yellow)!important}
+.synthwave-site.page-projects .beta-section{background:#0d0c16!important}
+.synthwave-site.page-projects .project-card:nth-child(2n):hover{box-shadow:5px 5px 0 var(--pt-blue)!important}
+.synthwave-site.page-about .team-section{background:#0d0c16!important}
+.synthwave-site.page-portfolio .skill-card{min-height:150px!important}
+.synthwave-site.page-portfolio .skill-card img{filter:drop-shadow(0 0 7px #3188f433)}
+.synthwave-site.page-portfolio .professional{background:#0d0c16!important}
+
+
+/* Visual QA pass: headers, hero proportions and portfolio width */
+.synthwave-site .navbar{position:relative;overflow:hidden}
+.hero-side-banana{position:absolute!important;z-index:2!important;width:clamp(230px,24vw,390px);height:auto;aspect-ratio:4/3;left:7%;top:30%;opacity:.72;pointer-events:none;filter:drop-shadow(0 0 8px #48cf61) drop-shadow(0 0 24px #48cf6177)}
+.page-projects .hero-side-banana{left:50%;top:47%;width:clamp(430px,39vw,650px);transform:translate(-50%,-50%);opacity:.5;filter:drop-shadow(0 0 12px #48cf61) drop-shadow(0 0 36px #48cf6190)}
+.page-history .hero-side-banana{left:3.5%;top:29%;width:clamp(450px,31vw,560px);opacity:.78;filter:drop-shadow(0 0 12px #48cf61) drop-shadow(0 0 34px #48cf6185)}
+.page-ds .hero-side-banana{left:auto;right:5%;top:27%;width:clamp(380px,30vw,540px);opacity:.76;filter:drop-shadow(0 0 12px #48cf61) drop-shadow(0 0 34px #48cf6185)}
+.synthwave-site footer{position:relative;isolation:isolate;overflow:hidden}
+.synthwave-site footer>:not(.footer-banana){position:relative;z-index:1}
+.footer-banana{position:absolute;z-index:0;right:clamp(20px,3vw,58px);top:50%;width:190px;height:auto;aspect-ratio:10/7;transform:translateY(-50%);opacity:.42;pointer-events:none;filter:drop-shadow(0 0 5px #48cf61) drop-shadow(0 0 13px #3188f455)}
+.synthwave-site .nav-links{justify-self:end;min-width:0}
+.synthwave-site .nav-links a{min-width:74px;padding-inline:12px}
+.synthwave-site :is(.games-hero-content,.projects-hero-content,.gallery-hero-content,.about-hero-content,.history-hero-content,.ds-hero-content){border-left:0!important}
+.synthwave-site :is(.games-hero-content,.projects-hero-content,.gallery-hero-content,.about-hero-content,.history-hero-content,.ds-hero-content) .eyebrow::before{content:"";display:inline-block;width:34px;height:2px;margin-right:12px;vertical-align:middle;background:var(--pt-green);box-shadow:0 0 8px #48cf6177}
+.synthwave-site :is(.games-hero,.projects-hero,.gallery-hero,.about-hero,.history-hero,.ds-hero){min-height:clamp(680px,86svh,900px)!important}
+.synthwave-site :is(.games-hero-content,.projects-hero-content,.gallery-hero-content,.about-hero-content,.history-hero-content,.ds-hero-content){padding-top:clamp(150px,19vh,205px)!important;padding-bottom:150px!important}
+.synthwave-site .project-shape,.synthwave-site .games-hero-glow{display:none!important}
+.synthwave-site .projects-hero::before{content:none!important}
+.synthwave-site .synth-grid{opacity:.62}
+.synthwave-site.page-about .about-hero h1{font-size:clamp(3.7rem,6.5vw,7rem)!important;line-height:.82!important}
+.synthwave-site.page-about .about-mark{right:6%;bottom:2%;width:clamp(260px,30vw,470px);opacity:.28!important;transform:rotate(5deg)}
+.synthwave-site.page-portfolio .notes{box-sizing:border-box;width:min(1240px,calc(100% - 48px))!important;max-width:1240px!important;margin-inline:auto!important;padding-inline:0!important}
+.synthwave-site.page-portfolio .notes-grid{width:100%}
+.synthwave-site.page-portfolio .contact{box-sizing:border-box;overflow:visible;padding-inline:clamp(24px,4vw,60px)!important}
+.synthwave-site.page-portfolio .contact>a{display:block;max-width:100%;overflow-wrap:anywhere;font-size:clamp(1.45rem,3.5vw,3.4rem)!important}
+.synthwave-site.page-portfolio .contact-groups{grid-template-columns:.72fr 1.45fr .83fr;gap:24px}
+.synthwave-site.page-portfolio .contact{border:0!important;box-shadow:none!important;outline:0!important}
+@media(max-width:1350px){.synthwave-site .nav-links a{min-width:68px;padding-inline:10px}}
+@media(max-width:1100px){.hero-side-banana{display:none}}
+@media(max-width:700px){.footer-banana{display:none}}
+@media(max-width:900px){.synthwave-site :is(.games-hero,.projects-hero,.gallery-hero,.about-hero,.history-hero,.ds-hero){min-height:700px!important}.synthwave-site :is(.games-hero-content,.projects-hero-content,.gallery-hero-content,.about-hero-content,.history-hero-content,.ds-hero-content){padding-top:135px!important;padding-bottom:125px!important}.synthwave-site.page-portfolio .notes{width:min(100% - 30px,1240px)!important}.synthwave-site.page-portfolio .contact-groups{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.synthwave-site :is(.games-hero,.projects-hero,.gallery-hero,.about-hero,.history-hero,.ds-hero){min-height:650px!important}.synthwave-site.page-portfolio .contact-groups{grid-template-columns:1fr}}
+
+
+/* Green-led landscape and uncropped game artwork */
+.synth-mountains{height:46%!important;bottom:-2%!important;filter:drop-shadow(0 0 5px #48cf6170) drop-shadow(0 0 18px #48cf6138)!important}
+.synth-mountains .back{fill:#102018!important;stroke:#2f9f49!important;stroke-width:3!important}
+.synth-mountains .front{fill:#09140e!important;stroke:var(--pt-green)!important;stroke-width:3!important}
+.synth-grid{display:none!important}
+.synthwave-site :is(.archive-id,.synth-hud,.file-code,.eyebrow,.section-label,.kicker){color:var(--pt-green)!important;text-shadow:0 0 8px #48cf6166!important}
+.synthwave-site .archive-ticker{color:var(--pt-green)!important}
+.synthwave-site.archive-home .file-thumb{height:auto!important;aspect-ratio:16/9;background:#050509}
+.synthwave-site.archive-home .file-thumb img{width:100%;height:100%;object-fit:contain!important;object-position:center;transform:none!important}
+@media(max-width:800px){.synth-mountains{height:36%!important;bottom:-1%!important}.synthwave-site.archive-home .file-thumb{height:auto!important}}
+
+
+/* Portfolio dimensional repair */
+.synthwave-site.page-portfolio :is(.case-study,.notes-grid>div,.history-list>div){background:transparent!important}
+
+.synthwave-site.page-portfolio main{overflow-x:clip;overflow-y:visible}
+.synthwave-site.page-portfolio main>.shell{box-sizing:border-box;width:min(1180px,calc(100% - 48px))!important;max-width:1180px;margin-inline:auto}
+.synthwave-site.page-portfolio :is(.selected,.notes,.skills,.github-work,.history){padding-block:clamp(80px,8vw,110px)!important}
+.synthwave-site.page-portfolio .plain-heading{grid-template-columns:minmax(130px,.28fr) minmax(0,1fr);gap:clamp(24px,4vw,58px);align-items:start;margin-bottom:clamp(48px,5vw,68px)}
+.synthwave-site.page-portfolio .plain-heading h2{max-width:900px;font-size:clamp(2.8rem,4.7vw,4.8rem);line-height:.92;overflow-wrap:normal}
+.synthwave-site.page-portfolio .case-study{box-sizing:border-box;grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);gap:clamp(38px,5vw,72px);padding-block:clamp(48px,5vw,64px)}
+.synthwave-site.page-portfolio .case-image,.synthwave-site.page-portfolio .case-copy{min-width:0}
+.synthwave-site.page-portfolio .case-image{aspect-ratio:16/9}
+.synthwave-site.page-portfolio .case-image img{display:block;width:100%;height:100%;aspect-ratio:auto;object-fit:contain!important;background:#090a0c}
+.synthwave-site.page-portfolio .case-copy h3{font-size:clamp(2.25rem,3.5vw,3.75rem);line-height:.96}
+.synthwave-site.page-portfolio .notes{width:min(1180px,calc(100% - 48px))!important;max-width:1180px!important}
+.synthwave-site.page-portfolio .notes-grid>div{box-sizing:border-box;min-width:0;padding:clamp(30px,3vw,42px)!important}
+.synthwave-site.page-portfolio .notes-grid>.music-note{display:grid;grid-template-columns:minmax(180px,.7fr) minmax(0,1.3fr);align-items:start;gap:40px}
+.synthwave-site.page-portfolio .notes-grid>.music-note h3{margin:0}
+.synthwave-site.page-portfolio .notes-grid>.music-note p{max-width:620px}
+.synthwave-site.page-portfolio .history{grid-template-columns:minmax(300px,.75fr) minmax(0,1.25fr);gap:clamp(45px,7vw,90px);align-items:start}
+.synthwave-site.page-portfolio .history .plain-heading{margin:0}
+.synthwave-site.page-portfolio .history .plain-heading h2{font-size:clamp(3rem,4.5vw,4.6rem)}
+.synthwave-site.page-portfolio .history-list>div{grid-template-columns:90px minmax(0,1fr);gap:25px;padding:24px 0}
+@media(max-width:900px){
+ .synthwave-site.page-portfolio main>.shell,.synthwave-site.page-portfolio .notes{width:min(100% - 30px,1180px)!important}
+ .synthwave-site.page-portfolio .case-study,.synthwave-site.page-portfolio .history{grid-template-columns:1fr}
+ .synthwave-site.page-portfolio .case-study.flip .case-image{order:0}
+ .synthwave-site.page-portfolio .plain-heading{grid-template-columns:1fr;gap:14px}
+ .synthwave-site.page-portfolio .notes-grid>.music-note{grid-template-columns:1fr;gap:12px}
+}
+@media(max-width:620px){
+ .synthwave-site.page-portfolio :is(.selected,.notes,.skills,.github-work,.history){padding-block:70px!important}
+ .synthwave-site.page-portfolio .plain-heading h2{font-size:clamp(2.45rem,12vw,3.5rem)}
+ .synthwave-site.page-portfolio .notes-grid{grid-template-columns:1fr}
+ .synthwave-site.page-portfolio .notes-grid>div{border-right:0!important}
+ .synthwave-site.page-portfolio .history-list>div{grid-template-columns:65px minmax(0,1fr);gap:16px}
+}
+
+.synthwave-site.page-ds .emulator-note.player-error{max-width:450px;padding:12px 15px;border-left:3px solid var(--pt-yellow);color:var(--pt-yellow)!important;text-align:left}
+/* Index mobile composition: sized for small screens, not compressed desktop. */
+@media(max-width:800px){
+  .synthwave-site .site-header{overflow:visible!important}
+  .synthwave-site .navbar{position:relative}
+  .synthwave-site .menu-toggle{position:relative;z-index:102;cursor:pointer;touch-action:manipulation}
+  .synthwave-site .nav-links{position:absolute!important;z-index:101!important;display:grid!important;width:auto;max-height:calc(100svh - 68px);overflow-y:auto;opacity:0!important;visibility:hidden!important;pointer-events:none;transform:translateY(-10px)!important}
+  .synthwave-site .nav-links.open{opacity:1!important;visibility:visible!important;pointer-events:auto;transform:translateY(0)!important}
+}
+
+@media(max-width:600px){
+  body.synthwave-site.archive-home{max-width:100%;overflow-x:hidden}
+  .synthwave-site.archive-home .game-files{padding:64px 18px 72px!important}
+  .synthwave-site.archive-home .files-heading{gap:24px;margin-bottom:34px}
+  .synthwave-site.archive-home .files-heading h2{font-size:clamp(2.65rem,13vw,3.45rem);line-height:.88}
+  .synthwave-site.archive-home .file-list{margin-inline:0}
+  .synthwave-site.archive-home .game-file{grid-template-columns:30px minmax(106px,30vw) minmax(0,1fr);min-height:112px;padding-inline:6px}
+  .synthwave-site.archive-home .file-number{font-size:.66rem}
+  .synthwave-site.archive-home .file-thumb{width:100%;height:auto!important;aspect-ratio:16/9}
+  .synthwave-site.archive-home .file-title{min-width:0;padding:12px 10px}
+  .synthwave-site.archive-home .file-title small{margin-bottom:7px;font-size:.46rem;line-height:1.35;white-space:normal}
+  .synthwave-site.archive-home .file-title strong{display:block;font-size:clamp(1.15rem,5.2vw,1.55rem);line-height:.94;overflow-wrap:normal}
+  .synthwave-site.archive-home .workbench-note{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;min-height:0;height:auto;padding:54px 22px 58px!important;overflow:hidden}
+  .synthwave-site.archive-home .workbench-note>*{min-width:0}
+  .synthwave-site.archive-home .workbench-note h2{font-size:clamp(2.25rem,11vw,3.15rem);line-height:.9;letter-spacing:-.045em;overflow-wrap:break-word}
+  .synthwave-site.archive-home .workbench-note p{margin-bottom:0;font-size:.94rem;line-height:1.6}
+  .synthwave-site.archive-home .workbench-note>a{width:100%;min-width:0;min-height:56px}
+}
+
+/* Mobile navigation: escape the clipped desktop navbar and scale the brand down. */
+@media(max-width:800px){
+  .synthwave-site .navbar{overflow:visible!important}
+  .synthwave-site .nav-links{position:fixed!important;top:68px!important;left:12px!important;right:12px!important;width:auto!important;max-width:none!important;justify-self:stretch!important;background:#0b0912!important;box-shadow:8px 8px 0 var(--pt-red),0 18px 40px #000b!important}
+  .synthwave-site .nav-links.open{display:grid!important}
+}
+@media(max-width:520px){
+  .synthwave-site .navbar{grid-template-columns:132px minmax(0,1fr)!important}
+  .synthwave-site .brand{width:132px!important}
+  .synthwave-site .brand{border-right:0!important}
+  .synthwave-site .brand img{width:108px!important;max-height:58px;object-fit:contain}
+  .synthwave-site .menu-toggle{border:0!important;background:transparent!important;box-shadow:none!important;outline:0}
+}
+
+/* History mobile hero: one balanced column with a controlled title and mark. */
+@media(max-width:600px){
+  .synthwave-site.page-history .history-hero{display:block!important;min-height:0!important;padding-top:68px!important}
+  .synthwave-site.page-history .history-hero-layout{box-sizing:border-box;display:flex!important;flex-direction:column;align-items:stretch;gap:34px;width:100%!important;max-width:none!important;margin:0!important;padding:58px 24px 82px!important}
+  .synthwave-site.page-history .history-hero-copy{width:100%;max-width:430px;margin-inline:auto}
+  .synthwave-site.page-history .history-hero-copy .eyebrow{margin-bottom:24px;white-space:normal}
+  .synthwave-site.page-history .history-hero-copy h1{max-width:100%;margin:0 0 26px!important;font-size:clamp(2.85rem,12.4vw,3.35rem)!important;line-height:.88!important;overflow-wrap:normal}
+  .synthwave-site.page-history .history-hero-copy>p:not(.eyebrow){max-width:100%;margin:0;font-size:.98rem;line-height:1.65}
+  .synthwave-site.page-history .history-scroll{margin-top:26px;font-size:.64rem}
+  .synthwave-site.page-history .history-hero-mark{align-self:center;justify-self:auto;width:190px!important;margin:4px auto 75px;text-align:center}
+  .synthwave-site.page-history .history-hero-mark img{width:190px;max-height:190px;object-fit:contain}
+  .synthwave-site.page-history .history-hero-mark span{margin-top:10px;font-size:.56rem}
+  .synthwave-site.page-history .synth-mountains{height:25%!important;bottom:-1%!important}
+}
+
+/* Remove the remaining desktop vertical centering from History on phones. */
+@media(max-width:600px){
+  .synthwave-site.page-history .history-hero{height:auto!important;align-items:flex-start!important;justify-content:flex-start!important;align-content:flex-start!important;place-content:start!important}
+  .synthwave-site.page-history .history-hero-layout{position:relative!important;inset:auto!important;min-height:0!important;height:auto!important;align-self:flex-start!important;justify-content:flex-start!important;align-content:flex-start!important;place-content:start!important;transform:none!important;padding-top:38px!important}
+  .synthwave-site.page-history .history-hero-copy{position:relative!important;inset:auto!important;align-self:flex-start!important;transform:none!important}
+}
+
+/* History structural fix: decorative glow stays out of flow; timeline uses dots, not bars. */
+.synthwave-site.page-history .history-glow{position:absolute!important;z-index:0!important;pointer-events:none}
+.synthwave-site.page-history .timeline-dot,
+.synthwave-site.page-history .timeline-entry:nth-child(even) .timeline-dot{background:transparent!important;box-shadow:none!important}
+
+@media(max-width:600px){
+  .synthwave-site.page-history .history-glow{display:none!important}
+  .synthwave-site.page-history .timeline-section{padding-block:72px!important;overflow:hidden}
+  .synthwave-site.page-history .timeline-section>.shell{width:calc(100% - 32px)!important}
+  .synthwave-site.page-history .timeline{margin-top:22px;padding-left:0}
+  .synthwave-site.page-history .timeline::before{left:8px!important;top:4px;bottom:4px;background:#48cf6155!important}
+  .synthwave-site.page-history .timeline-entry{grid-template-columns:28px minmax(0,1fr)!important;column-gap:12px;min-height:0;padding:4px 0 54px!important}
+  .synthwave-site.page-history .timeline-entry:last-child{padding-bottom:8px!important}
+  .synthwave-site.page-history .timeline-entry>time{grid-column:2!important;padding:0 0 10px!important;font-size:.68rem}
+  .synthwave-site.page-history .timeline-dot{grid-column:1!important;grid-row:1/3!important;width:28px;min-height:28px}
+  .synthwave-site.page-history .timeline-dot::before{left:1px!important;top:0!important;width:10px;height:10px;border-width:3px!important;background:var(--pt-green)!important;box-shadow:0 0 9px #48cf61!important}
+  .synthwave-site.page-history .timeline-copy{grid-column:2!important;min-width:0;max-width:100%}
+  .synthwave-site.page-history .timeline-copy h3{font-size:clamp(1.45rem,6.5vw,1.85rem);line-height:1.05;overflow-wrap:break-word}
+  .synthwave-site.page-history .timeline-copy>p:not(.timeline-kicker){font-size:.92rem;line-height:1.68}
+  .synthwave-site.page-history .timeline-copy>span{font-size:.52rem;line-height:1.55}
+  .synthwave-site.page-history .timeline-copy>a{font-size:.88rem;line-height:1.45}
+}
+
+/* Larger game artwork in the mobile index. */
+@media(max-width:600px){
+  .synthwave-site.archive-home .game-file{grid-template-columns:28px minmax(138px,40vw) minmax(0,1fr);min-height:128px;padding-inline:4px}
+  .synthwave-site.archive-home .file-title{padding:12px 8px 12px 12px}
+  .synthwave-site.archive-home .file-title strong{font-size:clamp(1.08rem,5vw,1.45rem);line-height:.96}
+}
+@media(max-width:380px){
+  .synthwave-site.archive-home .game-file{grid-template-columns:26px minmax(124px,38vw) minmax(0,1fr)}
+}
+
+/* Pancho beta feature: show the cartridge without an outer card frame. */
+.synthwave-site.page-projects .beta-card{background:transparent!important;border:0!important;outline:0!important;box-shadow:none!important;overflow:visible}
+
+.synthwave-site.page-portfolio .plain-heading{border-bottom:0!important}
+
+.synthwave-site.page-portfolio .notes-grid>.music-note{border-right:0!important}
+
+
+/* Performance: defer off-screen sections and simplify costly mobile compositing. */
+@supports(content-visibility:auto){
+  .synthwave-site main>section:not(:first-child){content-visibility:auto;contain-intrinsic-size:auto 800px}
+}
+@media(max-width:800px){
+  html{scroll-behavior:auto}
+  body.synthwave-site::after{display:none!important}
+  .synthwave-site .site-header,
+  .synthwave-site .site-header.scrolled{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+  .synthwave-site :is(.synth-banana,.hero-side-banana,.footer-banana){filter:drop-shadow(0 0 8px #48cf6170)!important}
+}
+
+
+/* Portfolio mobile skills: three compact cards per row. */
+@media(max-width:600px){
+  .synthwave-site.page-portfolio .skills-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  .synthwave-site.page-portfolio .skill-card{min-width:0;min-height:132px!important;padding:12px!important}
+  .synthwave-site.page-portfolio .skill-logo{width:38px;height:38px}
+  .synthwave-site.page-portfolio .skill-logo-wide{width:46px}
+  .synthwave-site.page-portfolio .skill-ar .skill-logo{width:48px}
+  .synthwave-site.page-portfolio .skill-card h3{margin:12px 0 3px;font-size:clamp(.68rem,2.8vw,.82rem);line-height:1.08;overflow-wrap:anywhere}
+  .synthwave-site.page-portfolio .skill-card p{font-size:clamp(.43rem,1.7vw,.52rem);line-height:1.35;overflow-wrap:anywhere}
+}
+
+
+/* Keep monochrome skill marks visible against the dark portfolio background. */
+.synthwave-site.page-portfolio :is(.skill-three,.skill-gamemaker,.skill-github,.skill-unity,.skill-6502) .skill-logo img{
+  filter:brightness(0) invert(1) drop-shadow(0 0 7px #ffffff26)!important;
+}
