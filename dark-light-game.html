@@ -1,134 +1,116 @@
 <!DOCTYPE html>
-<html style="height: 100%;">
+<html lang="en">
 <head>
-	<title>Dark Light</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="games/Dark-Light/favicon.jpg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="DL-styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="Dark Light is a story-driven pixel-art platformer adventure. Explore an island, battle monsters, and uncover a mysterious anomaly.">
+  <meta property="og:title" content="Dark Light — Platano Team">
+  <meta property="og:description" content="Guide John through a dangerous island, battle monsters, solve puzzles, and uncover the anomaly hidden in the darkness.">
+  <meta property="og:image" content="games/Dark-Light/DL_Banner_2026.png">
+  <meta property="og:type" content="website">
+  <title>Dark Light — Platano Team</title>
+  <link rel="icon" type="image/jpeg" href="games/Dark-Light/favicon.jpg">
+  <link rel="stylesheet" href="dark-light-landing.css">
 </head>
-<body style="background-color: #1B0026; height: 100%;">
-    <header>
-      <!--- Header nav bar--->
-      <!--
-      <a href="index.html">
-      <img src="sources/PT-2024-LONG-SMALL-V2.png" class="DL-txt">
-      </a>
-    -->
-    <div style="display: flex; height: 32px;"></div>
-      <nav>
-      <div class="NavBar-Racimos" style="background-color: black; justify-content: center !important; text-align: center !important;">
-      <div class="openMenu"><i class="fa fa-bars"></i></div>
-      <ul class="Nav-list">
-        <li><a href="dark-light-game.html" class="active Top-Options">Home</a></li>
-        <li><a href="dark-light-game.html" class="Top-Options">Images</a></li>
-        <li><a href="dark-light-game-characters.html" class="Top-Options">Characters</a></li>
-       <!-- <li><a href="dark-light-soundtrack.html" class="Top-Options">Soundtrack</a></li> -->
-        <li><a href="dark-light-game.html" class="Top-Options">Story</a></li>
-        <li><a href="index.html" class="Top-Options">Back to Main</a></li>
+<body>
+  <header class="dl-header" id="top">
+    <nav class="dl-nav" aria-label="Dark Light navigation">
+      <a class="dl-brand" href="#top"><img src="games/Dark-Light/DL_TITLE.png" alt="Dark Light"></a>
+      <button class="dl-menu" type="button" aria-expanded="false" aria-controls="dl-links" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <ul id="dl-links">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#trailer">Trailer</a></li>
+        <li><a href="#soundtrack">Soundtrack</a></li>
+        <li><a href="#characters">Characters</a></li>
+        <li><a class="nav-wishlist" href="#wishlist">Wishlist</a></li>
+        <li><a href="index.html">Platano Team ↗</a></li>
       </ul>
-      <div class="cheeseburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    </div>
     </nav>
-    </div>
-  <!---End of Header nav bar--->
-</header>
+  </header>
 
-<style>
-  body{
-    background-color: #1B0026;
-    justify-content: center;
-    text-align: center;
-  }
+  <main>
+    <section class="dl-hero" aria-labelledby="hero-title">
+      <div class="hero-mist"></div>
+      <div class="dl-shell hero-layout">
+        <div class="hero-copy reveal">
+          <p class="overline">A pixel-art platformer adventure by Platano Team</p>
+          <img class="hero-logo" src="games/Dark-Light/DL_TITLE_BIG.png" alt="Dark Light">
+          <h1 id="hero-title">Face the dark.<br><em>Find your light.</em></h1>
+          <p>Guide John across a dangerous island, battle monsters, solve puzzles, and uncover the source of a mysterious anomaly.</p>
+          <div class="hero-actions">
+            <a class="dl-button primary" href="https://store.steampowered.com/app/3224490/Dark_Light/" target="_blank" rel="noopener">Wishlist on Steam <span>↗</span></a>
+            <a class="dl-button secondary" href="#trailer">Watch the trailer <span>↓</span></a>
+          </div>
+          <div class="hero-meta"><span>Action-adventure</span><span>Single-player</span><span>Planned for 2026</span></div>
+        </div>
+        <div class="hero-art reveal"><div class="poster-frame"><img src="games/Dark-Light/DL_Poster_2026.png" alt="Dark Light 2026 poster artwork"></div><p>Something waits beyond the light.</p></div>
+      </div>
+      <a class="hero-scroll" href="#overview" aria-label="Continue to overview">Explore <span>↓</span></a>
+    </section>
 
-  .STEAM-WIDGET {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 24px;
-  width: 100%;
-  padding: 0 12px;
-}
+    <section class="overview dl-shell" id="overview" aria-labelledby="overview-title">
+      <div class="section-index reveal"><span>01</span><p>The game</p></div>
+      <div class="overview-grid">
+        <div class="overview-copy reveal"><p class="overline">Between shadow and light</p><h2 id="overview-title">A strange world<br>is waiting.</h2><p class="lead">Dark Light is a pixel-art platforming adventure inspired by NES classics from the 1980s and 1990s. John’s quiet night is shattered by a mysterious lightning strike—and by monsters emerging from the darkness.</p><p>Explore the island, fight enemies and bosses, solve puzzles, unlock new abilities, and uncover the forgotten lore behind the anomaly threatening John’s world.</p></div>
+        <figure class="world-art reveal"><img src="games/Dark-Light/DL_Banner_2026.png" alt="Dark Light world artwork"><figcaption>Dark Light 2026 key artwork.</figcaption></figure>
+      </div>
+      <div class="feature-row reveal"><article><span>01</span><h3>Explore</h3><p>Travel across an island filled with dangerous places, hidden secrets, and new abilities to unlock.</p></article><article><span>02</span><h3>Battle</h3><p>Face monstrous enemies and bosses using the improvised tools John finds along his journey.</p></article><article><span>03</span><h3>Uncover</h3><p>Solve puzzles, discover forgotten lore, and piece together the source of the dark anomaly.</p></article></div>
+    </section>
 
-.steam-iframe {
-  width: 100%;
-  max-width: 646px;
-  height: 190px;
-  border: none;
-  border-radius: 8px;
-}
+    <section class="trailer-section" id="trailer" aria-labelledby="trailer-title"><div class="dl-shell">
+      <div class="section-index reveal"><span>02</span><p>A first look</p></div>
+      <div class="trailer-heading reveal"><h2 id="trailer-title">See the world<br>in motion.</h2><p>Watch the official Dark Light trailer and get a first look at John’s journey, the island, its enemies, and the anomaly waiting in the darkness.</p></div>
+      <figure class="trailer-frame reveal">
+        <div class="trailer-autoplay">
+          <iframe class="trailer-youtube" width="560" height="315" src="https://www.youtube.com/embed/GKxuPGD6U3o?si=gIWPq3sWT-zV9aBY&amp;autoplay=1&amp;mute=1&amp;playsinline=1" title="Dark Light official trailer on YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <figcaption><span>Official trailer · Autoplay muted</span><a href="https://www.youtube.com/watch?v=GKxuPGD6U3o" target="_blank" rel="noopener">Watch on YouTube ↗</a></figcaption>
+      </figure>
+    </div></section>
 
-/* Tablet */
-@media (max-width: 900px) {
-  .steam-iframe {
-    height: 150px;
-    max-width: 500px;
-  }
-}
+    <section class="soundtrack-section" id="soundtrack" aria-labelledby="soundtrack-title"><div class="dl-shell">
+      <div class="section-index reveal"><span>03</span><p>Soundtrack preview</p></div>
+      <div class="soundtrack-heading reveal"><div><p class="overline">Music from Dark Light</p><h2 id="soundtrack-title">Hear the island<br>before you arrive.</h2></div><p>Listen to three early pieces from the world of Dark Light. Select a track and stay awhile—nothing plays until you press play.</p></div>
+      <div class="music-player reveal" data-player>
+        <audio id="dl-audio" preload="metadata" src="games/Dark-Light/DL-MUSIC/Title-Song.mp3"></audio>
+        <div class="player-main">
+          <div class="player-top"><button class="player-toggle" type="button" aria-label="Play Title Song"><span aria-hidden="true">▶</span></button><div class="now-playing"><p>Now playing</p><h3>Title Song</h3><span>Dark Light soundtrack demo</span></div><button class="player-mute" type="button" aria-label="Mute audio"><span aria-hidden="true">VOL</span></button></div>
+          <div class="player-progress"><span class="player-current">0:00</span><input class="player-seek" type="range" min="0" max="100" value="0" step="0.1" aria-label="Track progress"><span class="player-duration">0:00</span></div>
+        </div>
+        <ol class="track-list" aria-label="Dark Light soundtrack demos">
+          <li><button class="track active" type="button" data-src="games/Dark-Light/DL-MUSIC/Title-Song.mp3" data-title="Title Song"><span>01</span><strong>Title Song</strong><small>Selected</small></button></li>
+          <li><button class="track" type="button" data-src="games/Dark-Light/DL-MUSIC/Country-Village.mp3" data-title="Country Village"><span>02</span><strong>Country Village</strong><small>Play track</small></button></li>
+          <li><button class="track" type="button" data-src="games/Dark-Light/DL-MUSIC/Village.mp3" data-title="Village"><span>03</span><strong>Village</strong><small>Play track</small></button></li>
+        </ol>
+      </div>
+    </div></section>
 
-/* Móvil */
-@media (max-width: 600px) {
-  .steam-iframe {
-    height: 130px;
-    max-width: 400px;
-  }
-}
+    <section class="characters dl-shell" id="characters" aria-labelledby="characters-title">
+      <div class="section-index reveal"><span>04</span><p>Characters</p></div>
+      <header class="characters-heading reveal"><div><p class="overline">People of Dark Light</p><h2 id="characters-title">Everyone<br>has a story.</h2></div><p>Meet John, the protagonist of Dark Light, alongside two characters revealed from the island’s growing mystery.</p></header>
+      <div class="character-grid">
+        <button class="character-card character-select john reveal" type="button" data-character-name="John" data-character-image="games/Dark-Light/DL_CHAR_john.png" data-character-theme="john" aria-label="View John"><div class="character-image"><img src="games/Dark-Light/DL_CHAR_john.png" alt="John from Dark Light"></div><div class="character-name"><span>Character 01</span><h3>John</h3></div></button>
+        <button class="character-card character-select cleo reveal" type="button" data-character-name="Cleo" data-character-image="games/Dark-Light/DL_CHAR_cleo.png" data-character-theme="cleo" aria-label="View Cleo"><div class="character-image"><img src="games/Dark-Light/DL_CHAR_cleo.png" alt="Cleo from Dark Light"></div><div class="character-name"><span>Character 02</span><h3>Cleo</h3></div></button>
+        <button class="character-card character-select clare reveal" type="button" data-character-name="Clare" data-character-image="games/Dark-Light/DL_CHAR_clare.png" data-character-theme="clare" aria-label="View Clare"><div class="character-image"><img src="games/Dark-Light/DL_CHAR_clare.png" alt="Clare from Dark Light"></div><div class="character-name"><span>Character 03</span><h3>Clare</h3></div></button>
+        <article class="character-card mystery reveal" aria-label="More Dark Light character reveals coming soon"><div class="character-image"><div class="question-mark" aria-hidden="true">?</div><p>More faces are waiting<br>in the dark.</p></div><div class="character-name"><span>Future reveal</span><h3>Coming soon</h3></div></article>
+      </div>
+    </section>
 
-/* Móviles muy pequeños */
-@media (max-width: 400px) {
-  .steam-iframe {
-    height: 110px;
-    max-width: 340px;
-  }
-}
-  .dl-flyer {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 24px; /* espacio entre el flyer y el widget */
-}
-  </style>
+    <dialog class="character-dialog" aria-labelledby="selected-character-name">
+      <div class="character-spotlight">
+        <div class="spotlight-art"><img src="games/Dark-Light/DL_CHAR_john.png" alt=""></div>
+        <div class="spotlight-name"><h2 id="selected-character-name">John</h2><form method="dialog"><button type="submit">← Back to characters</button></form></div>
+      </div>
+    </dialog>
 
-<!--Posts-->
-	<main>
-    <img class="dl-side-fade-left" src="games/Dark-Light/DL-BG-SIDE-FADE-LEFT-V2.png">
-    <img class="dl-side-fade-right" src="games/Dark-Light/DL-BG-SIDE-FADE-RIGHT-V2.png">
-    <!--<img class="dl-title" src="games/Dark-Light/DL-SHADED.png" style=" transition: all 2s; height: auto; width: 30%; margin-top: 10%; margin-bottom: 9%;">-->
-    <img class="dl-flyer" src="games/Dark-Light/DL-FLYER.png">
-    
-    <!--<h2 class="ArtTitle-W-DL">Page under construction...</h2>
-		<p style="margin-top: 12px;" class="ArtCont-W-DL">Genre: Platformer</p>-->
-  <script src="script.js"></script>
-  <script src="animation.js"></script>
-	</main>
+    <section class="wishlist-section" id="wishlist"><div class="dl-shell wishlist-layout">
+      <div class="wishlist-copy reveal"><p class="overline">Planned for 2026</p><h2>Keep a light<br><em>on for us.</em></h2><p>Add Dark Light to your Steam wishlist to follow development and receive a notification when it launches.</p><a class="dl-button primary" href="https://store.steampowered.com/app/3224490/Dark_Light/" target="_blank" rel="noopener">Open Steam page <span>↗</span></a></div>
+      <div class="steam-card reveal"><iframe src="https://store.steampowered.com/widget/3224490/" title="Dark Light on Steam" loading="lazy"></iframe></div>
+    </div></section>
+  </main>
 
-<div class="STEAM-WIDGET">
-  <iframe class="steam-iframe" src="https://store.steampowered.com/widget/3224490/" frameborder="0"></iframe>
-</div>
-
-  <!--
-  <article class="CheckOut">
-    <div class="games-container">
-      <img class="imgs-img-W" src="games/Dark-Light/game-art-1.png">
-	</div>
-	</article>
--->
-
-<footer>
-	<div class="dl-footer" style="display: flex; justify-content: center; text-align: center;">
-    <p class="dl-txt-footer" style="margin-top: 30px;">&copy; Copyright 2015-2024 Platano Team. All Rights Reserved</p>
-  </div>
-</footer>
-
-</div>
+  <footer class="dl-footer"><a href="#top"><img src="games/Dark-Light/DL_TITLE.png" alt="Dark Light"></a><p>A Platano Team game.</p><p>© <span id="dl-year">2026</span> Platano Team.</p></footer>
+  <script src="dark-light-landing.js"></script>
 </body>
 </html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" role="img" aria-labelledby="title">
+  <title id="title">Flag of Puerto Rico</title>
+  <path fill="#ed0000" d="M0 0h60v8H0zm0 16h60v8H0zm0 16h60v8H0z"/>
+  <path fill="#fff" d="M0 8h60v8H0zm0 16h60v8H0z"/>
+  <path fill="#0050f0" d="M0 0v40l34.64-20z"/>
+  <path fill="#fff" d="m11.5 13.3 1.5 4.6h4.84l-3.92 2.85 1.5 4.6-3.92-2.84-3.92 2.84 1.5-4.6-3.92-2.85H10z"/>
+</svg>

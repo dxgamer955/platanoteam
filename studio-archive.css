@@ -1,0 +1,273 @@
+/* Platano Team archive identity — intentionally editorial, tactile, and asymmetric. */
+:root{--archive-paper:#f1ead8;--archive-paper-deep:#dfd5bc;--archive-ink:#11120f;--archive-green:#49bd63;--archive-red:#e94b3f;--archive-yellow:#f2cb52;--archive-rule:#11120f}
+.archive-home{background:var(--archive-paper);color:var(--archive-ink);font-family:"DM Sans",Arial,sans-serif}
+.archive-home ::selection{background:var(--archive-green);color:var(--archive-ink)}
+.archive-home .archive-header{position:absolute;padding:0;background:var(--archive-paper);border-bottom:2px solid var(--archive-rule);color:var(--archive-ink)}
+.archive-home .archive-header.scrolled{position:fixed;padding:0;background:rgba(241,234,216,.96);border-bottom:2px solid var(--archive-rule);backdrop-filter:blur(10px)}
+.archive-home .navbar{max-width:none;height:76px;margin:0;display:grid;grid-template-columns:230px 1fr auto;gap:0}
+.archive-home .brand{height:76px;display:grid;place-items:center;border-right:2px solid var(--archive-rule)}
+.archive-home .brand img{width:142px}
+.archive-id{align-self:center;margin:0;padding-left:25px;font:700 .67rem/1 "Courier New",monospace;letter-spacing:.11em}
+.archive-home .nav-links{align-self:stretch;gap:0}
+.archive-home .nav-links li{display:flex}
+.archive-home .nav-links a{display:grid;place-items:center;min-width:82px;padding:0 18px;border-left:1px solid rgba(17,18,15,.28);border-radius:0;color:var(--archive-ink);font:700 .7rem/1 "Courier New",monospace;text-transform:uppercase;letter-spacing:.06em}
+.archive-home .nav-links a:hover,.archive-home .nav-links a.active{background:var(--archive-ink);color:var(--archive-paper)}
+.archive-hero{min-height:100svh;display:grid;grid-template-columns:58px minmax(390px,.9fr) minmax(460px,1.1fr);grid-template-rows:1fr 48px;padding-top:76px;border-bottom:2px solid var(--archive-rule);background:var(--archive-paper)}
+.archive-rail{grid-row:1/3;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:30px 0 18px;border-right:2px solid var(--archive-rule);background:var(--archive-green);font:700 .62rem/1 "Courier New",monospace;letter-spacing:.1em;text-transform:uppercase}
+.archive-rail span{writing-mode:vertical-rl;transform:rotate(180deg)}
+.archive-rail b{writing-mode:vertical-rl;font:inherit}
+.archive-hero-copy{align-self:center;padding:70px clamp(35px,6vw,92px)}
+.file-code{margin:0 0 25px;font:700 .68rem/1.3 "Courier New",monospace;letter-spacing:.12em;text-transform:uppercase}
+.archive-hero-copy h1{max-width:770px;margin:0;font:900 clamp(4.2rem,7.8vw,8.2rem)/.82 "Arial Narrow","Arial Black",Impact,sans-serif;letter-spacing:-.065em;text-transform:uppercase}
+.archive-hero-copy h1 em{display:inline-block;color:var(--archive-red);font:italic 700 .8em/1 Georgia,serif;text-transform:none;letter-spacing:-.055em}
+.archive-hero-copy>p:not(.file-code){max-width:570px;margin:34px 0 0;font-size:1rem;line-height:1.7}
+.archive-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.archive-button{min-height:52px;display:inline-flex;align-items:center;justify-content:space-between;gap:28px;padding:0 18px;border:2px solid var(--archive-rule);font:700 .72rem/1 "Courier New",monospace;text-transform:uppercase;transition:.18s}
+.archive-button.ink{background:var(--archive-ink);color:var(--archive-paper)}
+.archive-button.paper{background:transparent;color:var(--archive-ink)}
+.archive-button:hover{background:var(--archive-red);color:var(--archive-paper);transform:translate(-3px,-3px);box-shadow:3px 3px 0 var(--archive-ink)}
+.current-file{align-self:center;margin:48px clamp(28px,5vw,75px) 48px 0;border:2px solid var(--archive-rule);background:var(--archive-ink);color:var(--archive-paper);box-shadow:12px 12px 0 var(--archive-green)}
+.file-tab{height:45px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;border-bottom:2px solid var(--archive-paper);font:700 .66rem/1 "Courier New",monospace;letter-spacing:.08em}
+.file-tab b{display:grid;place-items:center;width:45px;align-self:stretch;border-left:2px solid var(--archive-paper);font-size:1rem}
+.current-art{position:relative;display:block;overflow:hidden;border-bottom:2px solid var(--archive-paper)}
+.current-art img{width:100%;aspect-ratio:16/9;object-fit:cover;image-rendering:pixelated;transition:.3s}
+.current-art span{position:absolute;right:0;bottom:0;padding:10px 13px;background:var(--archive-yellow);color:var(--archive-ink);font:700 .65rem/1 "Courier New",monospace;text-transform:uppercase}
+.current-art:hover img{transform:scale(1.025);filter:contrast(1.08)}
+.file-caption{min-height:100px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:17px}
+.file-caption small{display:block;margin-bottom:10px;color:#b7b2a5;font:700 .58rem/1 "Courier New",monospace;letter-spacing:.08em}
+.file-caption img{width:min(230px,26vw);max-height:42px;object-fit:contain;object-position:left;image-rendering:pixelated}
+.file-caption>a{padding-bottom:5px;border-bottom:1px solid var(--archive-yellow);color:var(--archive-yellow);font:700 .67rem/1.3 "Courier New",monospace;text-align:right;text-transform:uppercase}
+.archive-ticker{grid-column:2/4;display:flex;align-items:center;justify-content:space-around;gap:22px;overflow:hidden;border-top:2px solid var(--archive-rule);background:var(--archive-red);font:700 .68rem/1 "Courier New",monospace;letter-spacing:.08em;white-space:nowrap}
+.archive-ticker i{font-style:normal;font-size:.55rem}
+.studio-record{display:grid;grid-template-columns:minmax(220px,.65fr) minmax(420px,1.2fr) minmax(260px,.65fr);border-bottom:2px solid var(--archive-rule);background:#fffdf5}
+.record-stamp{min-height:590px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:38px;padding:45px;border-right:2px solid var(--archive-rule);background:var(--archive-yellow)}
+.record-stamp img{width:min(100%,250px);filter:drop-shadow(7px 7px 0 rgba(17,18,15,.18))}
+.record-stamp span{font:700 .72rem/1.5 "Courier New",monospace;text-align:center;text-transform:uppercase;letter-spacing:.1em}
+.record-copy{align-self:center;padding:80px clamp(40px,6vw,100px)}
+.record-copy h2{margin:0 0 35px;font:900 clamp(3.7rem,6.8vw,7rem)/.86 "Arial Narrow","Arial Black",Impact,sans-serif;letter-spacing:-.06em;text-transform:uppercase}
+.record-copy h2 em{color:var(--archive-green);font:italic 700 .88em/1 Georgia,serif;text-transform:none}
+.record-copy p{max-width:700px;line-height:1.8}
+.record-copy .record-lead{font-size:1.3rem;font-weight:600;line-height:1.5}
+.underlined-link{display:inline-flex;gap:18px;margin-top:18px;padding-bottom:6px;border-bottom:2px solid currentColor;font:700 .72rem/1 "Courier New",monospace;text-transform:uppercase}
+.underlined-link:hover{color:var(--archive-red)}
+.record-data{margin:0;display:grid;grid-template-rows:repeat(3,1fr);border-left:2px solid var(--archive-rule)}
+.record-data div{display:flex;flex-direction:column;justify-content:center;padding:35px;border-bottom:2px solid var(--archive-rule)}
+.record-data div:last-child{border-bottom:0}
+.record-data dt{font:900 clamp(2.8rem,4vw,5rem)/1 "Arial Black",sans-serif;letter-spacing:-.06em}
+.record-data dd{margin:10px 0 0;font:700 .67rem/1.4 "Courier New",monospace;text-transform:uppercase}
+.game-files{padding:110px clamp(24px,6vw,100px) 130px;background:var(--archive-ink);color:var(--archive-paper)}
+.files-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin-bottom:65px}
+.files-heading h2{max-width:900px;margin:0;font:900 clamp(3.6rem,6vw,6.5rem)/.88 "Arial Narrow","Arial Black",Impact,sans-serif;letter-spacing:-.055em;text-transform:uppercase}
+.files-heading .underlined-link{flex:none;color:var(--archive-yellow)}
+.file-list{border-top:2px solid var(--archive-paper)}
+.game-file{display:grid;grid-template-columns:80px minmax(200px,340px) 1fr 80px;align-items:center;min-height:190px;border-bottom:2px solid var(--archive-paper);color:var(--archive-paper);transition:.2s}
+.game-file:hover{background:var(--archive-green);color:var(--archive-ink);padding-inline:12px}
+.file-number{font:700 .8rem/1 "Courier New",monospace}
+.file-thumb{height:145px;overflow:hidden;border-inline:2px solid currentColor}
+.file-thumb img{width:100%;height:100%;object-fit:cover;image-rendering:pixelated;transition:.3s}
+.game-file:hover .file-thumb img{transform:scale(1.05)}
+.file-title{padding:25px clamp(25px,5vw,70px)}
+.file-title small{display:block;margin-bottom:12px;font:700 .62rem/1.3 "Courier New",monospace;letter-spacing:.08em}
+.file-title strong{font:900 clamp(2rem,4vw,4.4rem)/.9 "Arial Narrow","Arial Black",Impact,sans-serif;text-transform:uppercase;letter-spacing:-.04em}
+.file-open{justify-self:end;font:700 .7rem/1 "Courier New",monospace}
+.workbench-note{display:grid;grid-template-columns:200px 1fr auto;align-items:center;gap:50px;padding:75px clamp(28px,6vw,100px);border-bottom:2px solid var(--archive-rule);background:var(--archive-green)}
+.workbench-note .file-code{margin:0}
+.workbench-note h2{margin:0;font:900 clamp(2.8rem,5vw,5.3rem)/.88 "Arial Narrow","Arial Black",Impact,sans-serif;text-transform:uppercase;letter-spacing:-.05em}
+.workbench-note p{max-width:720px;line-height:1.7}
+.workbench-note>a{min-height:120px;min-width:150px;display:grid;place-items:center;padding:20px;border:2px solid var(--archive-rule);background:var(--archive-paper);font:700 .7rem/1.5 "Courier New",monospace;text-align:center}
+.workbench-note>a:hover{background:var(--archive-red);color:white}
+.archive-home .archive-footer{padding:45px clamp(25px,5vw,80px);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:35px;border-top:0;background:var(--archive-paper);color:var(--archive-ink);font-size:.75rem}
+.archive-footer>div{display:flex;align-items:center;gap:20px}
+.archive-footer img{width:120px}
+.archive-footer nav{display:flex;gap:22px;font:700 .68rem/1 "Courier New",monospace;text-transform:uppercase}
+.archive-footer nav a:hover{color:var(--archive-red)}
+.footer-coordinates{text-align:right!important;font:700 .62rem/1.7 "Courier New",monospace}
+@media(max-width:1050px){.archive-home .navbar{grid-template-columns:190px 1fr auto}.archive-home .nav-links a{min-width:0;padding-inline:12px}.archive-hero{grid-template-columns:50px 1fr;grid-template-rows:auto auto 45px}.archive-rail{grid-row:1/4}.archive-hero-copy{padding-block:80px 35px}.current-file{margin:0 clamp(35px,7vw,90px) 75px}.archive-ticker{grid-column:2}.studio-record{grid-template-columns:.65fr 1.35fr}.record-data{grid-column:1/3;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr;border-top:2px solid var(--archive-rule);border-left:0}.record-data div{border-right:2px solid var(--archive-rule);border-bottom:0}.workbench-note{grid-template-columns:1fr auto}.workbench-note>.file-code{grid-column:1/-1}}
+@media(max-width:800px){.archive-home .archive-header{padding:0}.archive-home .navbar{height:68px;display:grid;grid-template-columns:165px 1fr auto}.archive-home .brand{height:68px}.archive-id{padding-left:15px;font-size:.55rem}.archive-home .menu-toggle{display:grid;margin-right:12px;border:2px solid var(--archive-rule);border-radius:0;background:var(--archive-paper)}.archive-home .menu-toggle span{background:var(--archive-ink)}.archive-home .nav-links{top:68px;left:0;right:0;padding:0;border:2px solid var(--archive-rule);border-radius:0;background:var(--archive-paper)}.archive-home .nav-links li{display:block}.archive-home .nav-links a{display:block;padding:17px 20px;border:0;border-bottom:1px solid var(--archive-rule)}.archive-hero{padding-top:68px;grid-template-columns:36px 1fr}.archive-rail{padding-block:20px}.archive-hero-copy{padding:65px 22px 32px}.archive-hero-copy h1{font-size:clamp(3.5rem,17vw,6.3rem)}.current-file{margin:0 22px 55px;box-shadow:7px 7px 0 var(--archive-green)}.file-caption{align-items:flex-end}.archive-ticker{justify-content:flex-start;padding-inline:20px}.studio-record{grid-template-columns:1fr}.record-stamp{min-height:390px;border-right:0;border-bottom:2px solid var(--archive-rule)}.record-stamp img{width:210px}.record-copy{padding:70px 25px}.record-data{grid-column:1;grid-template-columns:1fr}.record-data div{border-right:0;border-bottom:2px solid var(--archive-rule)}.game-files{padding:85px 22px}.files-heading{align-items:flex-start;flex-direction:column}.game-file{grid-template-columns:45px 110px 1fr;min-height:130px}.file-thumb{height:100px}.file-title{padding:15px}.file-title strong{font-size:clamp(1.45rem,6vw,2.4rem)}.file-open{display:none}.workbench-note{grid-template-columns:1fr;padding:60px 24px}.workbench-note>a{min-height:60px}.archive-home .archive-footer{grid-template-columns:1fr;justify-items:start}.archive-footer nav{flex-wrap:wrap}.footer-coordinates{text-align:left!important}}
+@media(max-width:480px){.archive-id{display:none}.archive-home .navbar{grid-template-columns:150px 1fr}.archive-home .menu-toggle{justify-self:end}.archive-hero-copy h1{font-size:clamp(3.2rem,16.5vw,5rem)}.archive-actions{display:grid}.archive-button{width:100%}.file-caption{min-height:85px}.file-caption>a{font-size:.55rem}.file-list{margin-inline:-22px}.game-file{grid-template-columns:38px 90px 1fr;padding-inline:10px}.file-thumb{height:82px}.file-title small{font-size:.5rem}.record-copy h2,.files-heading h2{font-size:3.4rem}}
+@media(prefers-reduced-motion:reduce){.current-art img,.game-file,.file-thumb img,.archive-button{transition:none}}
+
+
+/* Always-dark edition: light colors are reserved for type and small accents. */
+.archive-home{--archive-ink:#0c0e0c;--archive-rule:#625f55;background:#0c0e0c;color:var(--archive-paper)}
+.archive-home .archive-header,.archive-home .archive-header.scrolled{background:rgba(12,14,12,.97);color:var(--archive-paper);border-color:#625f55}
+.archive-home .brand{border-color:#625f55}
+.archive-home .nav-links a{border-color:#45483f;color:var(--archive-paper)}
+.archive-home .nav-links a:hover,.archive-home .nav-links a.active{background:var(--archive-green);color:#0c0e0c}
+.archive-hero{background:#111410;border-color:#625f55}
+.archive-rail{background:#17241b;color:var(--archive-green);border-color:#4a684f}
+.archive-hero-copy h1 em{color:#ef695e}
+.archive-button.ink{background:var(--archive-green);color:#0c0e0c;border-color:var(--archive-green)}
+.archive-button.paper{background:transparent;color:var(--archive-paper)}
+.archive-button:hover{background:var(--archive-red);color:#fff7e8;border-color:var(--archive-red);box-shadow:3px 3px 0 var(--archive-yellow)}
+.current-file{background:#090b09;border-color:#625f55;box-shadow:12px 12px 0 #244b2d}
+.archive-ticker{background:#211515;color:#f08a80;border-color:#69443f}
+.studio-record{background:#151815;color:var(--archive-paper);border-color:#625f55}
+.record-stamp{background:#19251c;border-color:#4a684f}
+.record-stamp img{filter:drop-shadow(7px 7px 0 rgba(0,0,0,.38))}
+.record-copy h2 em{color:#62d17a}
+.record-data{border-color:#625f55}
+.record-data div{border-color:#625f55}
+.game-files{background:#090b09}
+.workbench-note{background:#142019;color:var(--archive-paper);border-color:#4a684f}
+.workbench-note>a{background:var(--archive-green);color:#0c0e0c;border-color:var(--archive-green)}
+.workbench-note>a:hover{background:var(--archive-red);color:white;border-color:var(--archive-red)}
+.archive-home .archive-footer{background:#0c0e0c;color:var(--archive-paper);border-top:1px solid #45483f}
+@media(max-width:800px){.archive-home .menu-toggle{background:#0c0e0c;border-color:#625f55}.archive-home .menu-toggle span{background:var(--archive-paper)}.archive-home .nav-links{background:#0c0e0c;border-color:#625f55}.record-data{border-color:#625f55}}
+
+
+/* ================================================================
+   PUBLIC ARCHIVE PAGES
+   The shared editorial shell for Games, Lab, Gallery, History,
+   Studio, Portfolio and playable Nintendo DS records.
+   ================================================================ */
+.archive-page{--archive-paper:#f1ead8;--archive-ink:#0c0e0c;--archive-rule:#5d5b52;--archive-green:#49bd63;--archive-red:#e94b3f;--archive-yellow:#f2cb52;margin:0;background:#0c0e0c;color:var(--archive-paper);font-family:"DM Sans",Arial,sans-serif}
+.archive-page .shell{width:min(1240px,calc(100% - 48px))}
+.archive-page .site-header{position:absolute;padding:0;background:#0c0e0c;border-bottom:2px solid var(--archive-rule);color:var(--archive-paper)}
+.archive-page .site-header.scrolled{position:fixed;padding:0;background:rgba(12,14,12,.97);border-bottom:2px solid var(--archive-rule);backdrop-filter:blur(10px)}
+.archive-page .navbar{max-width:none;height:76px;margin:0;display:grid;grid-template-columns:230px 1fr auto;gap:0}
+.archive-page .brand{height:76px;display:grid;place-items:center;border-right:2px solid var(--archive-rule)}
+.archive-page .brand img{width:142px}
+.archive-page .nav-links{align-self:stretch;gap:0}
+.archive-page .nav-links li{display:flex}
+.archive-page .nav-links a{display:grid;place-items:center;min-width:82px;padding:0 18px;border-left:1px solid #45483f;border-radius:0;color:var(--archive-paper);font:700 .7rem/1 "Courier New",monospace;text-transform:uppercase;letter-spacing:.06em}
+.archive-page .nav-links a:hover,.archive-page .nav-links a.active{background:var(--archive-green);color:var(--archive-ink)}
+.archive-page h1,.archive-page h2{font-family:"Arial Narrow","Arial Black",Impact,sans-serif!important;font-weight:900!important;line-height:.86!important;letter-spacing:-.055em!important;text-transform:uppercase}
+.archive-page h1 em,.archive-page h2 em{color:var(--archive-green)!important;font-family:Georgia,serif!important;font-size:.86em;font-weight:700;font-style:italic;text-transform:none}
+.archive-page .eyebrow,.archive-page .section-label,.archive-page .kicker{font-family:"Courier New",monospace!important;font-size:.68rem!important;font-weight:700!important;letter-spacing:.1em!important;text-transform:uppercase}
+.archive-page .eyebrow>span,.archive-page .section-label>span{color:var(--archive-green)!important}
+.archive-page .button{border:2px solid currentColor!important;border-radius:0!important;box-shadow:none!important;font-family:"Courier New",monospace;font-size:.7rem;text-transform:uppercase}
+.archive-page .button:hover{transform:translate(-3px,-3px)!important;box-shadow:3px 3px 0 var(--archive-yellow)!important}
+.archive-page .button.primary{background:var(--archive-green)!important;color:var(--archive-ink)!important;border-color:var(--archive-green)!important}
+.archive-page .text-link{border-bottom:2px solid currentColor;font-family:"Courier New",monospace;font-size:.72rem;text-transform:uppercase}
+.archive-page footer{padding:45px clamp(25px,5vw,80px);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:28px;border-top:2px solid var(--archive-rule);background:#090b09;color:#aaa69b;font:700 .66rem/1.5 "Courier New",monospace;text-transform:uppercase}
+.archive-page footer img{width:120px}
+.archive-page footer .trademark-notice{grid-column:1/-1;max-width:760px;color:#77766f;text-transform:none}
+
+/* Page title records */
+.archive-page :is(.games-hero,.projects-hero,.gallery-hero,.about-hero,.history-hero){min-height:72svh;padding-top:76px;border-bottom:2px solid var(--archive-rule);background:#111410!important;color:var(--archive-paper)}
+.archive-page :is(.games-hero-glow,.project-shape,.about-mark){opacity:.14!important;filter:none!important}
+.archive-page :is(.games-hero-content,.projects-hero-content,.gallery-hero-content,.about-hero-content,.history-hero-content){padding-top:clamp(150px,22vh,235px);padding-bottom:80px;border-left:12px solid var(--archive-green)}
+.archive-page :is(.games-hero-content,.projects-hero-content,.gallery-hero-content,.about-hero-content,.history-hero-content)>*{margin-left:clamp(22px,4vw,58px)}
+.archive-page :is(.games-hero-content,.projects-hero-content,.gallery-hero-content,.about-hero-content,.history-hero-content) h1{max-width:1050px;font-size:clamp(4rem,8vw,8.5rem)!important}
+.archive-page :is(.games-hero-content,.projects-hero-content,.gallery-hero-content,.about-hero-content,.history-hero-content)>p:not(.eyebrow){max-width:650px;color:#b8b4a9;line-height:1.75}
+.archive-page :is(.games-scroll,.project-scroll,.history-scroll){border-bottom:2px solid var(--archive-yellow);color:var(--archive-yellow);font:700 .68rem/1 "Courier New",monospace;text-transform:uppercase}
+
+/* Games archive */
+.page-games .logo-marquee{border-block:2px solid var(--archive-rule);background:#171a16}
+.page-games .catalog{padding-block:110px;background:#0c0e0c}
+.page-games .catalog-heading{border-bottom:2px solid var(--archive-rule);padding-bottom:50px}
+.page-games .catalog-heading h2{font-size:clamp(3.5rem,6vw,6.5rem)!important}
+.page-games .catalog-grid{gap:0;border-top:2px solid var(--archive-rule);border-left:2px solid var(--archive-rule)}
+.page-games .catalog-card{padding:0;border-right:2px solid var(--archive-rule);border-bottom:2px solid var(--archive-rule);border-radius:0;background:#121511;box-shadow:none!important}
+.page-games .catalog-card:hover{z-index:2;background:#17241b;transform:translate(-4px,-4px)!important;box-shadow:4px 4px 0 var(--archive-green)!important}
+.page-games .card-art,.page-games .card-art img{border-radius:0!important}
+.page-games .card-art{border-bottom:2px solid var(--archive-rule)}
+.page-games .status{border:1px solid var(--archive-paper);border-radius:0;background:#0c0e0c;color:var(--archive-paper);font-family:"Courier New",monospace}
+.page-games .card-info{padding:22px}
+.page-games .card-info span{font-family:"Courier New",monospace}
+.page-games .card-info h3{font-family:"Arial Black",sans-serif;text-transform:uppercase}
+.page-games .games-cta{border:2px solid var(--archive-rule);border-radius:0;background:#142019;color:var(--archive-paper)}
+
+/* Project laboratory */
+.page-projects .project-group{padding-block:110px}
+.page-projects .project-heading{padding-bottom:45px;border-bottom:2px solid var(--archive-rule)}
+.page-projects .project-heading h2{font-size:clamp(3.5rem,6vw,6.5rem)!important}
+.page-projects .project-grid{gap:0;border:2px solid var(--archive-rule)}
+.page-projects .project-card{border:0;border-right:2px solid var(--archive-rule);border-radius:0;background:#121511;box-shadow:none}
+.page-projects .project-card:last-child{border-right:0}
+.page-projects .project-art{border-radius:0;border-right:2px solid var(--archive-rule)}
+.page-projects .project-meta{background:#121511}
+.page-projects .project-card:hover{background:#17241b;transform:translate(-4px,-4px);box-shadow:4px 4px 0 var(--archive-green)}
+.page-projects .beta-section{border-block:2px solid var(--archive-rule);background:#101712!important;color:var(--archive-paper)}
+.page-projects .beta-card,.page-projects .wip-card{border:2px solid var(--archive-rule);border-radius:0;background:#121511;box-shadow:none}
+.page-projects .beta-card img,.page-projects .wip-card img{border-radius:0}
+.page-projects .wip-grid{gap:0;border-top:2px solid var(--archive-rule);border-left:2px solid var(--archive-rule)}
+.page-projects .wip-card{border-top:0;border-left:0}
+
+/* Visual archive */
+.page-gallery .gallery-section{padding-block:110px}
+.page-gallery .gallery-heading{padding-bottom:45px;border-bottom:2px solid var(--archive-rule)}
+.page-gallery .gallery-heading h2{font-size:clamp(3.5rem,6vw,6.5rem)!important}
+.page-gallery .gallery-grid{gap:12px}
+.page-gallery .gallery-item{border:2px solid var(--archive-rule);border-radius:0;background:#121511;box-shadow:none}
+.page-gallery .gallery-item img{border-radius:0;filter:saturate(.82);transition:.25s}
+.page-gallery .gallery-item:hover{transform:translate(-4px,-4px);box-shadow:4px 4px 0 var(--archive-yellow)}
+.page-gallery .gallery-item:hover img{filter:saturate(1.1);transform:none}
+.page-gallery .gallery-item span{border-top:2px solid var(--archive-rule);background:#0c0e0c;font-family:"Courier New",monospace}
+.page-gallery .lightbox{background:rgba(7,8,7,.97)}
+.page-gallery .lightbox figure{border:2px solid var(--archive-rule);border-radius:0;background:#0c0e0c}
+
+/* Studio record */
+.page-about .story,.page-about .team-section{padding-block:110px}
+.page-about .story-grid{border-bottom:2px solid var(--archive-rule);padding-bottom:65px}
+.page-about .values{gap:0;border:2px solid var(--archive-rule);border-radius:0;background:#121511}
+.page-about .values div{border-right:2px solid var(--archive-rule)}
+.page-about .values div:last-child{border-right:0}
+.page-about .team-section{border-block:2px solid var(--archive-rule);background:#101712}
+.page-about .team-card{border:2px solid var(--archive-rule);border-radius:0;background:#121511;box-shadow:none}
+.page-about .team-photo,.page-about .team-photo img{border-radius:0}
+.page-about .team-card:hover{transform:translate(-4px,-4px);box-shadow:4px 4px 0 var(--archive-green)}
+.page-about .about-cta{border:2px solid var(--archive-rule);border-radius:0;background:#1b1710;color:var(--archive-paper)}
+
+/* Ten-year history */
+.page-history .history-hero:before{background:none!important}
+.page-history .history-hero-meta{border:2px solid var(--archive-rule);border-radius:0;background:#0c0e0c}
+.page-history .logo-history,.page-history .history-principles{padding-block:110px}
+.page-history .logo-grid{gap:0;border:2px solid var(--archive-rule)}
+.page-history .logo-card{border:0;border-right:2px solid var(--archive-rule);border-radius:0;background:#121511;box-shadow:none}
+.page-history .logo-card:last-child{border-right:0}
+.page-history .timeline-section{border-block:2px solid var(--archive-rule);background:#101310;color:var(--archive-paper)}
+.page-history .timeline-entry{border-color:var(--archive-rule)}
+.page-history .timeline-dot{background:var(--archive-green);box-shadow:0 0 0 6px #101310}
+.page-history .principles-grid{gap:0;border:2px solid var(--archive-rule)}
+.page-history .principles-grid article{border:0;border-right:2px solid var(--archive-rule);border-radius:0;background:#121511}
+.page-history .principles-grid article:last-child{border-right:0}
+.page-history .history-cta{border:2px solid var(--archive-rule);border-radius:0;background:#142019;color:var(--archive-paper)}
+
+/* Eric's portfolio remains personal, but belongs to the same archive. */
+.page-portfolio :is(.intro,.quick-info,.selected,.notes,.skills,.github-work,.history,.contact){color:var(--archive-paper)}
+.page-portfolio .intro{padding-top:150px;border-bottom:2px solid var(--archive-rule)}
+.page-portfolio .intro h1{font-size:clamp(4rem,8vw,8rem)!important}
+.page-portfolio :is(.plain-heading,.selected-header){border-bottom:2px solid var(--archive-rule)}
+.page-portfolio :is(.quick-info,.notes-grid,.skill-grid,.repo-grid,.history-list,.contact){border-radius:0!important}
+.page-portfolio :is(.case-study,.notes-grid>div,.skill-card,.repo-card,.history-list>div){border-color:var(--archive-rule)!important;background:#121511!important;border-radius:0!important;box-shadow:none!important}
+.page-portfolio .case-study{border-block:2px solid var(--archive-rule)}
+.page-portfolio .case-media img{border-radius:0}
+.page-portfolio .skill-grid,.page-portfolio .repo-grid{gap:0;border-top:2px solid var(--archive-rule);border-left:2px solid var(--archive-rule)}
+.page-portfolio .skill-card,.page-portfolio .repo-card{border-top:0!important;border-left:0!important}
+.page-portfolio .skill-card:hover,.page-portfolio .repo-card:hover{transform:translate(-3px,-3px);box-shadow:3px 3px 0 var(--archive-green)!important}
+.page-portfolio .professional{border-block:2px solid var(--archive-rule);background:#101712!important;color:var(--archive-paper)}
+.page-portfolio .contact{border:2px solid var(--archive-rule);background:#142019!important}
+
+/* Playable Nintendo DS records */
+.page-ds .ds-hero{border-bottom:2px solid var(--archive-rule)}
+.page-ds .ds-hero:before{background:rgba(6,8,7,.82)!important}
+.page-ds .ds-hero-content{padding-top:150px;border-left:12px solid var(--project-accent)}
+.page-ds .ds-hero-content>*{margin-left:clamp(22px,4vw,58px)}
+.page-ds .project-tags span{border-radius:0;background:#0c0e0c;font-family:"Courier New",monospace}
+.page-ds .play-section{padding-block:100px}
+.page-ds .play-heading{padding-bottom:45px;border-bottom:2px solid var(--archive-rule)}
+.page-ds .arcade-panel{border:2px solid var(--archive-rule);border-radius:0;background:#121511;box-shadow:10px 10px 0 rgba(var(--project-rgb),.22)}
+.page-ds .game-banner{border-bottom:2px solid var(--archive-rule)}
+.page-ds .emulator-shell{border:2px solid var(--archive-rule);border-radius:0;background:#090b09}
+.page-ds .control-grid div{border-radius:0;background:#0c0e0c}
+.page-ds .box-art{border-radius:0}
+
+/* Legal archive: content remains verbatim, presentation becomes readable. */
+.archive-legal{margin:0!important;padding:0 0 100px!important;background:#0c0e0c!important;color:#d7d1c2!important;font-family:"DM Sans",Arial,sans-serif!important}
+.legal-topbar{position:sticky;top:0;z-index:10;height:76px;display:grid;grid-template-columns:180px 1fr auto;align-items:center;border-bottom:2px solid #5d5b52;background:rgba(12,14,12,.97);font:700 .68rem/1 "Courier New",monospace;letter-spacing:.09em;color:#f1ead8}
+.legal-topbar>a:first-child{height:76px;display:grid;place-items:center;border-right:2px solid #5d5b52}
+.legal-topbar img{width:130px}
+.legal-topbar span{padding-left:25px}
+.legal-topbar>a:last-child{align-self:stretch;display:grid;place-items:center;padding:0 25px;border-left:1px solid #45483f;color:#49bd63;text-decoration:none}
+.archive-legal>div{width:min(900px,calc(100% - 40px));margin-left:auto!important;margin-right:auto!important}
+.archive-legal>div:first-of-type{padding-top:70px;border-bottom:2px solid #5d5b52}
+.archive-legal span[style*="font-size: 34px"]{color:#f1ead8!important;font-family:"Arial Narrow","Arial Black",Impact,sans-serif!important;font-size:clamp(2.4rem,5vw,4.7rem)!important;line-height:.95!important;letter-spacing:-.045em!important;text-transform:uppercase}
+.archive-legal span,.archive-legal li{max-width:780px;color:#c3bdae!important;font-family:"DM Sans",Arial,sans-serif!important;line-height:1.8!important}
+.archive-legal ul{width:auto!important;max-width:780px;padding-left:25px;border-left:2px solid #49bd63}
+.archive-legal a{color:#70d785}
+
+@media(max-width:900px){.archive-page .navbar{grid-template-columns:190px 1fr auto}.archive-page .nav-links a{padding-inline:12px}.archive-page :is(.games-hero-content,.projects-hero-content,.gallery-hero-content,.about-hero-content,.history-hero-content){border-left-width:8px}.page-projects .project-card,.page-history .logo-card,.page-history .principles-grid article{border-right:0;border-bottom:2px solid var(--archive-rule)}.page-projects .project-grid,.page-history .logo-grid,.page-history .principles-grid{grid-template-columns:1fr}.page-about .values div{border-right:0;border-bottom:2px solid var(--archive-rule)}}
+@media(max-width:800px){.archive-page .site-header{padding:0}.archive-page .navbar{height:68px;grid-template-columns:165px 1fr auto}.archive-page .brand{height:68px}.archive-page .menu-toggle{display:grid;margin-right:12px;border:2px solid var(--archive-rule);border-radius:0;background:#0c0e0c}.archive-page .menu-toggle span{background:var(--archive-paper)}.archive-page .nav-links{top:68px;left:0;right:0;padding:0;border:2px solid var(--archive-rule);border-radius:0;background:#0c0e0c}.archive-page .nav-links li{display:block}.archive-page .nav-links a{display:block;padding:17px 20px;border:0;border-bottom:1px solid var(--archive-rule)}.archive-page :is(.games-hero,.projects-hero,.gallery-hero,.about-hero,.history-hero){padding-top:68px}.archive-page :is(.games-hero-content,.projects-hero-content,.gallery-hero-content,.about-hero-content,.history-hero-content){padding-top:125px}.archive-page footer{grid-template-columns:1fr;justify-items:center;text-align:center}.archive-page footer p:last-of-type{text-align:center}.page-games .catalog-grid{grid-template-columns:1fr}.page-projects .project-grid{display:grid}.page-ds .ds-hero-content{padding-top:130px}.legal-topbar{height:68px;grid-template-columns:145px 1fr auto}.legal-topbar>a:first-child{height:68px}.legal-topbar span{padding-left:14px}.legal-topbar>a:last-child{padding-inline:14px}}
+@media(max-width:520px){.archive-page .archive-id{display:none}.archive-page .navbar{grid-template-columns:150px 1fr}.archive-page .menu-toggle{justify-self:end}.archive-page .shell{width:min(100% - 30px,1240px)}.archive-page :is(.games-hero-content,.projects-hero-content,.gallery-hero-content,.about-hero-content,.history-hero-content) h1{font-size:clamp(3.2rem,16vw,5rem)!important}.page-games .catalog-grid,.page-projects .wip-grid,.page-portfolio .skill-grid,.page-portfolio .repo-grid{margin-inline:-15px}.legal-topbar{grid-template-columns:135px 1fr}.legal-topbar span{display:none}.legal-topbar>a:last-child{font-size:.58rem}.archive-legal>div{width:calc(100% - 30px)}.archive-legal span[style*="font-size: 34px"]{font-size:2.5rem!important}}

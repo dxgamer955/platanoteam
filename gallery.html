@@ -1,143 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Gallery</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="sources/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;500&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Photos, artwork and behind-the-scenes moments from Platano Team.">
+  <title>Gallery — Platano Team</title><link rel="icon" href="sources/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home.css"><link rel="stylesheet" href="gallery-page.css">
+  <link rel="stylesheet" href="studio-archive.css">
 </head>
-<body>
-  <a href="index.html">
-    <img src="sources/Simple-Name-SMALL-V2-2024.png" alt="ptlogo" class="pgLogo">
-    </a>
-  <div class="fancy-blur">
-	<header class="fancy-header2">
-    </div>
-            <!--- Header nav bar--->
-            <nav>
-            <div class="NavBar">
-            <div class="openMenu"><i class="fa fa-bars"></i></div>
-            <ul class="Nav-list">
-              <li><a href="index.html" id="Top-Options">Home</a></li>
-              <!--<li><a href="images.html" id="Top-Options">Images</a></li>-->
-              <!--<li><a href="videos.html" id="Top-Options">Videos</a></li>-->
-              <li><a href="games.html" id="Top-Options">Games</a></li>
-              <li><a href="gallery.html" class="active" id="Top-Options">Gallery</a></li>
-              <li><a href="projects.html" id="Top-Options">Projects</a></li>
-              <li><a href="about-us.html" id="Top-Options">About Us</a></li>
-            </ul>
-            <div class="cheeseburger">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
-            </div>
-          </div>
-          </nav>
-          </div>
-        <!---End of Header nav bar--->
-        <!--<script src="script.js"></script>-->
-<div class="header-content">
-    <h1 class="Title">Gallery</h1>
-		<p class="SubTitle">Just Images</p>
-</div>
-</header>
-
-<!--Posts-->
-	<main>
-
-    <article class="article-Gallery">
-    <div class="gallery-container">
-        <div class="gallery-image"><img src="Gallery/jovarealpanchoreal.jpg">JVTGDS & PMDS Boxes</div>
-        <div class="gallery-image"><img src="Gallery/jovarealpanchorealback.jpg">Backwards JVTGDS & PMDS Boxes</div>
-        <div class="gallery-image"><img src="Gallery/3homebrews.jpg">TBHDS, PMDS & JVTGDS</div>
-        <div class="gallery-image"><img src="Gallery/panchoreal.jpg">Physical Pancho Maker DS</div>
-        <div class="gallery-image"><img src="Gallery/jovareal.jpg">Physical JVTGDS</div>
-        <div class="gallery-image"><img src="sources/BEAVER.gif">Celebrating Beaver</div>
-        <div class="gallery-image"><img src="sources/PG.png">dxgamer955</div>
-        <div class="gallery-image"><img src="Gallery/1-img.png">The Beaver Hero Full Edition - Creating some backgrounds</div>
-        <div class="gallery-image"><img src="Gallery/2.png">Beaver in El Morro</div>
-        <div class="gallery-image"><img src="Gallery/3-img.png">The Beaver Hero Full Edition - Creating a boss!</div>
-        <div class="gallery-image"><img src="Gallery/4.png">Ships!</div>
-        <div class="gallery-image"><img src="Gallery/5.png">The Beaver Hero Full Edition - Pirate Ship!</div>
-        <div class="gallery-image"><img src="Gallery/6.jpg">Dx's setup v2</div>
-        <div class="gallery-image"><img src="Gallery/image(54).jpg">E.T. Atari</div>
-        <div class="gallery-image"><img src="Gallery/7.jpg">Crypto currency coins souvenirs</div>
-        <div class="gallery-image"><img src="Gallery/8.jpg">Windows 11</div>
-        <div class="gallery-image"><img src="Gallery/9.jpg">Dx's Setup v3 (2022)</div>
-        <div class="gallery-image"><img src="Gallery/10.jpg">Setting the stream!</div>
-        <div class="gallery-image"><img src="Gallery/11.jpg">Oh...
-
-        </div>
-    </div>
-  </article>
-
-
-
-<!--  Cards (Experimental) -->
-<!--
-  <article class="article-Gallery">
-    <h1 class="What-is-Title">Cards</h1>
-    <br>
-    <div class="gallery-container">
-      <div class="card">
-        <div class="content" style="background-position: center; background-size: cover; background-repeat: no-repeat; background-image: url('games/Cards/dl-card.png')">
-        </div>
+<body class="archive-page page-gallery">
+  <header class="site-header" id="top"><nav class="navbar" aria-label="Main navigation">
+    <a class="brand" href="index.html" aria-label="Platano Team home"><img src="sources/Simple-Name-SMALL-V2-2024.png" alt="Platano Team"></a><p class="archive-id" aria-hidden="true">PT / PR / EST. 2015</p>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="main-menu"><li><a href="index.html">Home</a></li><li><a href="games.html">Games</a></li><li><a class="active" href="gallery.html">Gallery</a></li><li><a href="projects.html">Projects</a></li><li><a href="history.html">History</a></li><li><a href="about-us.html">About Us</a></li></ul>
+  </nav></header>
+  <main>
+    <section class="gallery-hero"><div class="gallery-hero-content shell reveal"><p class="eyebrow"><span></span> Inside our world</p><h1>Games, projects<br>& <em>good memories.</em></h1><p>A visual archive of our games, creative process, hardware experiments, and the people behind Platano Team.</p></div></section>
+    <section class="gallery-section shell" aria-labelledby="gallery-title">
+      <div class="gallery-heading reveal"><div><div class="section-label"><span>01</span> Visual archive</div><h2 id="gallery-title">Moments worth<br><em>sharing.</em></h2></div><p>Select any image to see it up close.</p></div>
+      <div class="gallery-grid">
+        <button class="gallery-item wide reveal" data-title="JVTGDS & PMDS Boxes"><img src="Gallery/jovarealpanchoreal.jpg" alt="Physical JVTGDS and PMDS boxes" loading="lazy"><span><b>JVTGDS & PMDS Boxes</b><i>View image ↗</i></span></button>
+        <button class="gallery-item wide reveal" data-title="Backwards JVTGDS & PMDS Boxes"><img src="Gallery/jovarealpanchorealback.jpg" alt="Back of JVTGDS and PMDS boxes" loading="lazy"><span><b>JVTGDS & PMDS Boxes</b><i>Back covers ↗</i></span></button>
+        <button class="gallery-item wide reveal" data-title="TBHDS, PMDS & JVTGDS"><img src="Gallery/3homebrews.jpg" alt="Three physical homebrew games" loading="lazy"><span><b>Three homebrews</b><i>Physical collection ↗</i></span></button>
+        <button class="gallery-item reveal" data-title="Physical Pancho Maker DS"><img src="Gallery/panchoreal.jpg" alt="Physical Pancho Maker DS" loading="lazy"><span><b>Pancho Maker DS</b><i>Physical edition ↗</i></span></button>
+        <button class="gallery-item reveal" data-title="Physical JVTGDS"><img src="Gallery/jovareal.jpg" alt="Physical JVTGDS" loading="lazy"><span><b>JVTGDS</b><i>Physical edition ↗</i></span></button>
+        <button class="gallery-item reveal" data-title="Celebrating Beaver"><img src="sources/BEAVER.gif" alt="Celebrating Beaver animation" loading="lazy"><span><b>Celebrating Beaver</b><i>Animation ↗</i></span></button>
+        <button class="gallery-item reveal" data-title="dxgamer955"><img src="sources/PG.png" alt="dxgamer955 artwork" loading="lazy"><span><b>dxgamer955</b><i>Artwork ↗</i></span></button>
+        <button class="gallery-item reveal" data-title="Creating some backgrounds"><img src="Gallery/1-img.png" alt="Creating backgrounds for The Beaver Hero" loading="lazy"><span><b>Creating backgrounds</b><i>The Beaver Hero ↗</i></span></button>
+        <button class="gallery-item reveal" data-title="Beaver in El Morro"><img src="Gallery/2.png" alt="Beaver at El Morro" loading="lazy"><span><b>Beaver in El Morro</b><i>Artwork ↗</i></span></button>
+        <button class="gallery-item reveal" data-title="Creating a boss"><img src="Gallery/3-img.png" alt="Creating a boss for The Beaver Hero" loading="lazy"><span><b>Creating a boss</b><i>Behind the scenes ↗</i></span></button>
+        <button class="gallery-item reveal" data-title="Ships!"><img src="Gallery/4.png" alt="Ship artwork" loading="lazy"><span><b>Ships!</b><i>Artwork ↗</i></span></button>
+        <button class="gallery-item reveal" data-title="Pirate Ship"><img src="Gallery/5.png" alt="Pirate ship from The Beaver Hero" loading="lazy"><span><b>Pirate Ship</b><i>The Beaver Hero ↗</i></span></button>
+        <button class="gallery-item reveal" data-title="Dx's setup v2"><img src="Gallery/6.jpg" alt="Dx setup version 2" loading="lazy"><span><b>Dx's setup v2</b><i>Studio life ↗</i></span></button>
+        <button class="gallery-item reveal" data-title="E.T. Atari"><img src="Gallery/image(54).jpg" alt="ET for Atari" loading="lazy"><span><b>E.T. Atari</b><i>Collection ↗</i></span></button>
+        <button class="gallery-item reveal" data-title="Crypto currency coins souvenirs"><img src="Gallery/7.jpg" alt="Cryptocurrency coin souvenirs" loading="lazy"><span><b>Coin souvenirs</b><i>Collection ↗</i></span></button>
+        <button class="gallery-item reveal" data-title="Windows 11"><img src="Gallery/8.jpg" alt="Windows 11 setup" loading="lazy"><span><b>Windows 11</b><i>Setup ↗</i></span></button>
+        <button class="gallery-item reveal" data-title="Dx's Setup v3 (2022)"><img src="Gallery/9.jpg" alt="Dx setup version 3" loading="lazy"><span><b>Dx's setup v3</b><i>2022 ↗</i></span></button>
+        <button class="gallery-item reveal" data-title="Setting the stream!"><img src="Gallery/10.jpg" alt="Setting up a stream" loading="lazy"><span><b>Setting the stream!</b><i>Behind the scenes ↗</i></span></button>
+        <button class="gallery-item reveal" data-title="Oh..."><img src="Gallery/11.jpg" alt="Oh moment" loading="lazy"><span><b>Oh...</b><i>A moment ↗</i></span></button>
       </div>
-    </div>
-  </article>
-
-
-
-<script>
- const card = document.querySelector('.card .content');
-
-card.addEventListener('mousemove', (e) => {
-const rect = card.getBoundingClientRect();
-const x = e.clientX - rect.left; // Mouse X relative to card
-const y = e.clientY - rect.top;  // Mouse Y relative to card
-
-// Invert rotation values
-const rotateX = ((y / rect.height) - 0.5) * -50; // Invert tilt up/down
-const rotateY = ((x / rect.width) - 0.5) * 50;  // Invert tilt left/right
-
-// Apply the inverted rotation
-card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-});
-
-card.addEventListener('mouseleave', () => {
-// Reset the card when the mouse leaves
-card.style.transform = 'rotateX(0) rotateY(0)';
-});
-</script>
-
--->
-
-
-    <div class="gallery-popup">
-      <span class="gal-span"></span>
-      <img src="sources/image3.png" alt="">
-  </div>
-  <script src="script.js"></script>
-  <script src="animation.js"></script>
-
-    <!--
-		<article class="article">
-			<header>
-				<h2 class="ArtTitle">Another Blog Post Title</h2>
-				<p class="post-meta">Posted on <time datetime="2023-02-17">February 17, 2023</time> by <a href="#">Author Name</a></p>
-			</header>
-			<p class="ArtCont">More blog post content goes here.</p>
-		</article>
-  -->
-	</main>
-	<footer>
-
-    <p>&copy; Copyright 2015-2024 Platano Team. All Rights Reserved</p>
-        <p class="made-with"> </p>
-	</footer>
+    </section>
+  </main>
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden><button class="lightbox-close" type="button" aria-label="Close viewer">×</button><button class="lightbox-nav prev" type="button" aria-label="Previous image">←</button><figure><img src="" alt=""><figcaption></figcaption></figure><button class="lightbox-nav next" type="button" aria-label="Next image">→</button></div>
+  <footer><a href="#top"><img src="sources/Simple-Name-SMALL-V2-2024.png" alt="Platano Team"></a><p>Independent games, proudly made in Puerto Rico.</p><p>© <span id="year">2026</span> Platano Team.</p></footer>
+  <script src="home.js"></script><script src="gallery-page.js"></script>
 </body>
 </html>

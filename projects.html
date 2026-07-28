@@ -1,224 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Projects</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="sources/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;500&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover Platano Team experiments, Nintendo DS homebrew and games in development.">
+  <title>Projects — Platano Team</title><link rel="icon" href="sources/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home.css"><link rel="stylesheet" href="projects-page.css">
+  <link rel="stylesheet" href="studio-archive.css">
 </head>
-<body>
+<body class="archive-page page-projects">
+  <header class="site-header" id="top"><nav class="navbar" aria-label="Main navigation">
+    <a class="brand" href="index.html" aria-label="Platano Team home"><img src="sources/Simple-Name-SMALL-V2-2024.png" alt="Platano Team"></a><p class="archive-id" aria-hidden="true">PT / PR / EST. 2015</p>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="main-menu"><li><a href="index.html">Home</a></li><li><a href="games.html">Games</a></li><li><a href="gallery.html">Gallery</a></li><li><a class="active" href="projects.html">Projects</a></li><li><a href="history.html">History</a></li><li><a href="about-us.html">About Us</a></li></ul>
+  </nav></header>
+  <main>
+    <section class="projects-hero"><div class="project-shape one"></div><div class="project-shape two"></div><div class="projects-hero-content shell reveal"><p class="eyebrow"><span></span> Made by curiosity</p><h1>Ideas become<br><em>something real.</em></h1><p>Homebrew, prototypes, beta tests, and ideas in progress. This is where we learn, build, and try something new.</p><a class="project-scroll" href="#released">Browse projects <span>↓</span></a></div></section>
 
-    <style>
-
-    /* GAMES */
-
-/*  GALLERY  */
-
-.projects-image {
-  transform: scale(0.9);
-  transition: 0.5s;
-  margin-left: auto;
-  margin-right: auto;
-  width: auto;
-  height: 85%;
-}
-
-
-.projects-image:hover {
-  transform: scale(1);
-}
-
-.projects-container
-{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0px;
-    justify-content: center;
-    padding: 10px;
-    align-items: center;
-}
-
-.projects-container .projects-image
-{
-    cursor: pointer;
-}
-
-
-.projects-container .projects-image img
-{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 16px;
-}
-
-/* ON MOBILE GAME GALLERY */
-@media(max-width: 600px) {
-  .projects-image {
-    transform: scale(1);
-    transition: 0.5s;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: 100%;
-  }
-}
-@media(max-width: 900px) {
-  .projects-image {
-    transform: scale(1);
-    transition: 0.5s;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-
-/*GAME TITLES*/
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.projects-container, .projects-container-on-mobile
-{
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    padding: 5px;
-    box-sizing: border-box;
-    margin-top: 3%;
-}
-
-
-@media only screen and (max-width: 800px)
-{
-  .projects-container, .projects-container-on-mobile { grid-template-columns: auto auto; }
-}
-@media only screen and (max-width: 1400px)
-{
-  .projects-container, .projects-container-on-mobile {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-row-gap: 0px;
-    grid-column-gap: 0px;}
-}
-@media only screen and (max-width: 500px)
-{
-  .projects-container, .projects-container-on-mobile { grid-template-columns: auto auto auto; }
-}
-@media only screen and (max-width: 750px)
-{
-  .projects-container, .projects-container-on-mobile {
-    display: grid;
-    grid-template-columns: auto;
-    grid-row-gap: 30px;
-    grid-column-gap: 8px;}
-}
-
-/* ON MOBILE WHAT-IS-TITLE*/
-@media(max-width: 600px) {
-  .projects-container-on-mobile
-  {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-row-gap: 10px;
-    grid-column-gap: 8px;
-  }
-}
-
-
-
-
-
-
-
-
-</style>
-
-
-
-
-  <a href="index.html">
-    <img src="sources/Simple-Name-SMALL-V2-2024.png" alt="ptlogo" class="pgLogo">
-    </a>
-  <div class="fancy-blur">
-	<header class="fancy-header4">
-    </div>
-            <!--- Header nav bar--->
-            <nav>
-            <div class="NavBar">
-            <div class="openMenu"><i class="fa fa-bars"></i></div>
-            <ul class="Nav-list">
-              <li><a href="index.html" id="Top-Options">Home</a></li>
-              <li><a href="games.html" id="Top-Options">Games</a></li>
-              <!--<li><a href="images.html" id="Top-Options">Images</a></li>-->
-              <!--<li><a href="videos.html" id="Top-Options">Videos</a></li>-->
-              <li><a href="gallery.html" id="Top-Options">Gallery</a></li>
-              <li><a href="projects.html" class="active" id="Top-Options">Projects</a></li>
-              <li><a href="about-us.html" id="Top-Options">About Us</a></li>
-            </ul>
-            <div class="cheeseburger">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
-            </div>
-          </div>
-          </nav>
-          </div>
-        <!---End of Header nav bar--->
-        <!--<script src="script.js"></script>-->
-<div class="header-content">
-    <h1 class="Title">Projects</h1>
-		<p class="SubTitle">Hand Crafted Games</p>
-</div>
-</header>
-
-<!--Posts-->
-	<main>
-    <article class="article-games">
-      <h1 class="What-is-Title">dxgamer955's Projects</h1>
-    <div class="projects-container">
-        <div class="projects-image"><a href="/games/Projects/JVTGDS.html"><img src="/games/Projects/PTDSG-IMGS/CARDS/JOVA CARD.png"></a></div>
-        <div class="projects-image"><a href="/games/Projects/PB2015.html"><img src="/games/Projects/PTDSG-IMGS/CARDS/PB2015 CARD.png"></a></div>
-        </div>
-    </div>
-  </article>
-
-      <article class="article-games">
-      <h1 class="What-is-Title">Beta Tests!</h1>
-    <div class="projects-container">
-        <div class="projects-image"><a href="/games/Projects/PMDSBETA1.3.html"><img src="/games/Projects/PTDSG-IMGS/CARDS/PANCHO CARD.png"></a></div>
-        </div>
-    </div>
-  </article>
-
-  <article class="article-games">
-    <h1 class="What-is-Title">In Develpment...</h1>
-  <div class="projects-container">
-    
-      <div class="projects-image"><a href="projects.html"><img src="/games/Projects/PTDSG-IMGS/CARDS/PANCHO CARD.png"></a></div>
-      <div class="projects-image"><a href="projects.html"><img src="/games/Projects/PTDSG-IMGS/CARDS/BEAVER CARD.png"></a></div>
-      <div class="projects-image"><a href="projects.html"><img src="/games/Projects/PTDSG-IMGS/CARDS/GUITA CARD.png"></a></div>
-      <div class="projects-image"><a href="projects.html"><img src="/games/Projects/PTDSG-IMGS/CARDS/DL CARD.png"></a></div>
-
+    <section class="project-group shell" id="released" aria-labelledby="released-title">
+      <div class="project-heading reveal"><div><div class="section-label"><span>01</span> Playable projects</div><h2 id="released-title">Nintendo DS<br><em>homebrew.</em></h2></div><p>Curious experiences made for original hardware and emulators.</p></div>
+      <div class="project-grid released-grid">
+        <a class="project-card reveal" href="games/Projects/JVTGDS.html"><div class="project-art purple"><img src="games/Projects/PTDSG-IMGS/CARDS/JOVA CARD.png" alt="Jovani Vazquez The Game DS"></div><div class="project-meta"><span>Playable · Nintendo DS</span><h3>Jovani Vazquez: The Game</h3><p>Jovani Vazquez: The Game, built for Nintendo DS.</p><b>Explore project ↗</b></div></a>
+        <a class="project-card reveal" href="games/Projects/PB2015.html"><div class="project-art green"><img src="games/Projects/PTDSG-IMGS/CARDS/PB2015 CARD.png" alt="Pixel Beats 2015"></div><div class="project-meta"><span>Playable · Nintendo DS</span><h3>Project Beta 2015</h3><p>A homebrew experiment from the Platano archive.</p><b>Explore project ↗</b></div></a>
       </div>
-  </div>
-</article>
-  <script src="script.js"></script>
-  <script src="animation.js"></script>
+    </section>
 
+    <section class="beta-section"><div class="shell beta-layout">
+      <div class="beta-copy reveal"><div class="section-label"><span>02</span> Beta test</div><p class="kicker">An early build</p><h2>Play it before<br><em>it is finished.</em></h2><p>Step into the development process with Pancho Maker DS Beta 1.3—an evolving homebrew experiment.</p><a class="button primary" href="games/Projects/PMDSBETA1.3.html">Open beta project <span>→</span></a></div>
+      <a class="beta-card reveal" href="games/Projects/PMDSBETA1.3.html"><img src="games/Projects/PTDSG-IMGS/CARDS/PANCHO CARD.png" alt="Pancho Maker DS Beta 1.3"><span>Beta 1.3</span></a>
+    </div></section>
 
-	</main>
-	<footer>
-    <p>&copy; Copyright 2015-2024 Platano Team. All Rights Reserved</p>
-        <p class="made-with"> </p>
-	</footer>
+    <section class="project-group shell development" aria-labelledby="development-title">
+      <div class="project-heading reveal"><div><div class="section-label"><span>03</span> Work in progress</div><h2 id="development-title">We’re still<br><em>figuring it out.</em></h2></div><p>Some ideas need time, testing, and a few unexpected turns before finding their final form.</p></div>
+      <div class="wip-grid">
+        <article class="wip-card reveal"><img src="games/Projects/PTDSG-IMGS/CARDS/PANCHO CARD.png" alt="Pancho project"><div><span>In development</span><h3>Pancho Sandwich Maker DS</h3></div></article>
+        <article class="wip-card reveal"><img src="games/Projects/PTDSG-IMGS/CARDS/BEAVER CARD.png" alt="Beaver project"><div><span>Paused development</span><h3>The Beaver Hero DS</h3></div></article>
+        <article class="wip-card reveal"><img src="games/Projects/PTDSG-IMGS/CARDS/GUITA CARD.png" alt="Guita project"><div><span>Paused development</span><h3>El Guitarreño x Hatsune Miku Love Story DS</h3></div></article>
+        <article class="wip-card reveal"><img src="games/Projects/PTDSG-IMGS/CARDS/DL CARD.png" alt="Dark Light project"><div><span>Paused development</span><h3>Dark Light DS</h3></div></article>
+      </div>
+    </section>
+  </main>
+  <footer><a href="#top"><img src="sources/Simple-Name-SMALL-V2-2024.png" alt="Platano Team"></a><p>Independent games, proudly made in Puerto Rico.</p><p>© <span id="year">2026</span> Platano Team.</p><p class="trademark-notice">Nintendo DS is a trademark of Nintendo. Platano Team is not affiliated with or endorsed by Nintendo.</p></footer>
+  <script src="home.js"></script>
 </body>
 </html>

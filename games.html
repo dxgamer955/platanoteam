@@ -1,114 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Games</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="sources/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;500&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the games created by Platano Team, an independent Puerto Rican game studio.">
+  <title>Games — Platano Team</title>
+  <link rel="icon" href="sources/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="games-page.css">
+  <link rel="stylesheet" href="studio-archive.css">
 </head>
-<body>
-  <a href="index.html">
-    <img src="sources/Simple-Name-SMALL-V2-2024.png" alt="ptlogo" class="pgLogo">
-    </a>
-  <div class="fancy-blur">
-	<header class="fancy-header5">
-    </div>
-            <!--- Header nav bar--->
-            <nav>
-            <div class="NavBar">
-            <div class="openMenu"><i class="fa fa-bars"></i></div>
-            <ul class="Nav-list">
-              <li><a href="index.html" id="Top-Options">Home</a></li>
-              <li><a href="games.html" class="active" id="Top-Options">Games</a></li>
-              <!--<li><a href="images.html" id="Top-Options">Images</a></li>-->
-              <!--<li><a href="videos.html" id="Top-Options">Videos</a></li>-->
-              <li><a href="gallery.html" id="Top-Options">Gallery</a></li>
-              <li><a href="projects.html" id="Top-Options">Projects</a></li>
-              <li><a href="about-us.html" id="Top-Options">About Us</a></li>
-            </ul>
-            <div class="cheeseburger">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
-            </div>
-          </div>
-          </nav>
-          </div>
-        <!---End of Header nav bar--->
-        <!--<script src="script.js"></script>-->
-<div class="header-content">
-    <h1 class="Title">Games</h1>
-		<p class="SubTitle">Just Games</p>
-</div>
-</header>
+<body class="archive-page page-games">
+  <header class="site-header" id="top">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Platano Team home"><img src="sources/Simple-Name-SMALL-V2-2024.png" alt="Platano Team"></a><p class="archive-id" aria-hidden="true">PT / PR / EST. 2015</p>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="main-menu">
+        <li><a href="index.html">Home</a></li><li><a class="active" href="games.html">Games</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="projects.html">Projects</a></li><li><a href="history.html">History</a></li><li><a href="about-us.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<!--Posts-->
-	<main>
+  <main>
+    <section class="games-hero" aria-labelledby="page-title">
+      <div class="games-hero-glow"></div>
+      <div class="games-hero-content shell reveal">
+        <p class="eyebrow"><span></span> The Platano collection <img class="pr-flag" src="sources/puerto-rico-flag.svg" alt="Puerto Rico"></p>
+        <h1 id="page-title">Crafted with care.<br><em>Made in Puerto Rico.</em></h1>
+        <p>Distinctive worlds, memorable characters, and playful ideas—carefully crafted in Puerto Rico.</p>
+        <a class="games-scroll" href="#all-games">Explore all games <span>↓</span></a>
+      </div>
+    </section>
 
-
-	<!-- LOGO SLIDER-->
-  <div class="slider-container">
-    <div class="logos-slide">
-      <img src="titles/VP.png">
-      <img src="titles/TBH.png">
-      <img src="titles/GCS.png">
-      <img src="titles/VP2.png">
-      <img src="titles/RT.png">
-      <img src="titles/DC.png">
-      <img src="titles/PGM.png">
-      <img src="titles/ROS.png">
-      <img src="titles/RCKS.png">
-      <img src="titles/BC.png">
-      <img src="titles/RR.png">
-      <img src="titles/WNC.png">
-      <img src="titles/TBC.png">
-    </div>
-    <div class="logos-slide">
-      <img src="titles/VP.png">
-      <img src="titles/TBH.png">
-      <img src="titles/GCS.png">
-      <img src="titles/VP2.png">
-      <img src="titles/RT.png">
-      <img src="titles/DC.png">
-      <img src="titles/PGM.png">
-      <img src="titles/ROS.png">
-      <img src="titles/RCKS.png">
-      <img src="titles/BC.png">
-      <img src="titles/RR.png">
-      <img src="titles/WNC.png">
-      <img src="titles/TBC.png">
-    </div>
+    <div class="logo-marquee" aria-label="Platano Team game logos">
+      <div class="logo-track">
+        <div class="logo-set"><img src="titles/VP.png" alt=""><img src="titles/TBH.png" alt=""><img src="titles/GCS.png" alt=""><img src="titles/VP2.png" alt=""><img src="titles/DC.png" alt=""><img src="titles/RCKS.png" alt=""><img src="titles/RR.png" alt=""><img src="titles/WNC.png" alt=""></div>
+        <div class="logo-set" aria-hidden="true"><img src="titles/VP.png" alt=""><img src="titles/TBH.png" alt=""><img src="titles/GCS.png" alt=""><img src="titles/VP2.png" alt=""><img src="titles/DC.png" alt=""><img src="titles/RCKS.png" alt=""><img src="titles/RR.png" alt=""><img src="titles/WNC.png" alt=""></div>
+      </div>
     </div>
 
-    <article class="article-games">
-      <h1 class="What-is-Title">Our Games</h1>
-    <div class="games-container">
-      
-        <div class="games-image"><a href="dark-light-game.html"><img src="games/dl-v1.png"></a></div>
-        <div class="games-image"><a href="https://platanoteam.itch.io/the-beaver-hero-full-edition"><img src="games/tbh-v2.png"></a></div>
-        <div class="games-image"><a href="https://platanoteam.itch.io/dual-cats-ggj22"><img src="games/dc.png"></a></div>
-        <div class="games-image"><a href="https://platanoteam.itch.io/risky-rescue"><img src="games/rr.png"></a></div>
-        <div class="games-image"><a href="https://platanoteam.itch.io/vuela-pichon-2"><img src="games/vp2-v2.png"></a></div>
-        <div class="games-image"><a href="https://platanoteam.itch.io/we-need-cows"><img src="games/wnc.png"></a></div>
-        <div class="games-image"><a href="https://platanoteam.itch.io/rocks-144mb"><img src="games/rcks.png"></a></div>
-        <div class="games-image"><a href="https://gamejolt.com/games/Bugy_Cat_Demo/252278"><img src="games/bcd.png"></a></div>
-        <div class="games-image"><a href="https://platanoteam.itch.io/retro-grass-cutter-simulator"><img src="games/gcs-v2.png"></a></div>
-        <div class="games-image"><a href="https://gamejolt.com/games/pongremaster/198928"><img src="games/pgm.png"></a></div>
-        </div>
-    </div>
-  </article>
-  <script src="script.js"></script>
-  <script src="animation.js"></script>
+    <section class="catalog shell" id="all-games" aria-labelledby="catalog-title">
+      <div class="catalog-heading reveal">
+        <div><div class="section-label"><span>01</span> Our collection</div><h2 id="catalog-title">Choose your<br><em>next game.</em></h2></div>
+        <p>Every game begins with an idea and grows into a world worth exploring.</p>
+      </div>
 
+      <div class="catalog-grid">
+        <a class="catalog-card featured-game reveal" href="dark-light-game.html">
+          <div class="card-art"><img src="games/Dark-Light/DL_Banner_2026.png" alt="Dark Light 2026 key artwork"><span class="status upcoming">Coming soon</span></div>
+          <div class="card-info"><div><span>Action · Adventure</span><h3>Dark Light</h3></div><b aria-hidden="true">↗</b></div>
+        </a>
+        <a class="catalog-card featured-game reveal" href="https://platanoteam.itch.io/the-beaver-hero-full-edition" target="_blank" rel="noopener">
+          <div class="card-art"><img src="games/tbh-v2.png" alt="The Beaver Hero"><span class="status">Available now</span></div>
+          <div class="card-info"><div><span>Arcade · Action</span><h3>The Beaver Hero</h3></div><b aria-hidden="true">↗</b></div>
+        </a>
+        <a class="catalog-card reveal" href="https://platanoteam.itch.io/dual-cats-ggj22" target="_blank" rel="noopener"><div class="card-art"><img src="games/dc.png" alt="Dual Cats"></div><div class="card-info"><div><span>Platformer · RPG</span><h3>Dual Cats</h3></div><b>↗</b></div></a>
+        <a class="catalog-card reveal" href="https://platanoteam.itch.io/risky-rescue" target="_blank" rel="noopener"><div class="card-art"><img src="games/rr.png" alt="Risky Rescue"></div><div class="card-info"><div><span>Arcade · Stealth</span><h3>Risky Rescue</h3></div><b>↗</b></div></a>
+        <a class="catalog-card reveal" href="https://platanoteam.itch.io/vuela-pichon-2" target="_blank" rel="noopener"><div class="card-art"><img src="games/vp2-v2.png" alt="Vuela Pichón 2"></div><div class="card-info"><div><span>Arcade</span><h3>Vuela Pichón 2</h3></div><b>↗</b></div></a>
+        <a class="catalog-card reveal" href="https://platanoteam.itch.io/we-need-cows" target="_blank" rel="noopener"><div class="card-art"><img src="games/wnc.png" alt="We Need Cows"></div><div class="card-info"><div><span>Arcade</span><h3>We Need Cows</h3></div><b>↗</b></div></a>
+        <a class="catalog-card reveal" href="https://platanoteam.itch.io/rocks-144mb" target="_blank" rel="noopener"><div class="card-art"><img src="games/rcks.png" alt="Rocks"></div><div class="card-info"><div><span>Arcade</span><h3>Rocks</h3></div><b>↗</b></div></a>
+        <a class="catalog-card reveal" href="https://gamejolt.com/games/Bugy_Cat_Demo/252278" target="_blank" rel="noopener"><div class="card-art"><img src="games/bcd.png" alt="Bugy Cat Demo"></div><div class="card-info"><div><span>RPG</span><h3>Bugy Cat</h3></div><b>↗</b></div></a>
+        <a class="catalog-card reveal" href="https://platanoteam.itch.io/retro-grass-cutter-simulator" target="_blank" rel="noopener"><div class="card-art"><img src="games/gcs-v2.png" alt="Retro Grass Cutter Simulator"></div><div class="card-info"><div><span>Simulation</span><h3>Grass Cutter</h3></div><b>↗</b></div></a>
+        <a class="catalog-card reveal" href="https://gamejolt.com/games/pongremaster/198928" target="_blank" rel="noopener"><div class="card-art"><img src="games/pgm.png" alt="Pong Remastered"></div><div class="card-info"><div><span>Arcade classic</span><h3>Pong Remastered</h3></div><b>↗</b></div></a>
+      </div>
+    </section>
 
-	</main>
-	<footer>
-    <p>&copy; Copyright 2015-2024 Platano Team. All Rights Reserved</p>
-        <p class="made-with"> </p>
-	</footer>
+    <section class="games-cta shell reveal"><div><p class="kicker">Built from curiosity</p><h2>Hardware, software, and<br><em>everything in between.</em></h2></div><a class="button dark" href="projects.html">Explore our projects <span>→</span></a></section>
+  </main>
+
+  <footer><a href="#top"><img src="sources/Simple-Name-SMALL-V2-2024.png" alt="Platano Team"></a><p>Independent games, proudly made in Puerto Rico.</p><p>© <span id="year">2026</span> Platano Team.</p></footer>
+  <script src="home.js"></script>
 </body>
 </html>
