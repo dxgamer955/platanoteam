@@ -8,7 +8,7 @@
     const stage=document.createElement('div');stage.className='synth-stage';stage.setAttribute('aria-hidden','true');
     stage.innerHTML='<svg class="synth-mountains" viewBox="0 0 1200 240" preserveAspectRatio="none"><path class="back" d="M0 220 120 122 210 174 340 72 455 169 585 105 700 175 830 58 950 164 1060 104 1200 220Z"/><path class="front" d="M0 220 165 145 275 205 430 119 570 208 755 132 910 204 1055 137 1200 220Z"/></svg>';
     hero.prepend(stage);
-    const hud=document.createElement('div');hud.className='synth-hud';hud.setAttribute('aria-hidden','true');hud.innerHTML='<span>PLAYER 01</span><span>HIGH SCORE 2015</span><span>STAGE PR</span>';hero.prepend(hud);
+    const hud=document.createElement('div');hud.className='synth-hud';hud.setAttribute('aria-hidden','true');hud.innerHTML='<span>PLATANO TEAM</span><span>SINCE 2015</span><span>MADE IN PR</span>';hero.prepend(hud);
     if(document.body.classList.contains('archive-home')){
       const canvas=document.createElement('canvas');canvas.className='synth-banana';canvas.width=900;canvas.height=650;canvas.dataset.model=modelUrl;canvas.setAttribute('aria-hidden','true');hero.prepend(canvas);renderBanana(canvas);
     }
