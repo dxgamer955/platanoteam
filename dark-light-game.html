@@ -16,8 +16,8 @@
 <body>
   <header class="dl-header" id="top">
     <nav class="dl-nav" aria-label="Dark Light navigation">
-      <a class="dl-brand" href="#top" aria-label="Dark Light home">
-        <img src="games/Dark-Light/DL_TITLE.png" alt="Dark Light">
+      <a class="dl-brand" href="index.html" aria-label="Platano Team home">
+        <img src="sources/Simple-Name-SMALL-V2-2024.png" alt="Platano Team">
       </a>
       <button class="dl-menu" type="button" aria-expanded="false" aria-controls="dl-links" aria-label="Open menu">
         <span></span><span></span><span></span>
@@ -28,7 +28,6 @@
         <li><a href="#soundtrack"><span>03</span>Music</a></li>
         <li><a href="#characters"><span>04</span>Characters</a></li>
         <li><a class="nav-wishlist" href="#wishlist">Wishlist</a></li>
-        <li><a href="index.html">Platano Team &nearr;</a></li>
       </ul>
     </nav>
   </header>
@@ -43,6 +42,18 @@
         <img class="scene-layer cliff" src="games/Dark-Light/DL_cliff.png" alt="">
         <img class="scene-layer john" src="games/Dark-Light/DL_John.png" alt="">
       </div>
+      <div class="hero-trailer" id="hero-trailer" data-hero-trailer aria-hidden="true">
+        <div class="hero-trailer-controls" aria-label="Trailer controls">
+          <button type="button" data-hero-video-play aria-label="Pause trailer" title="Pause trailer">
+            <span class="video-control-icon playback-icon" data-hero-video-play-icon aria-hidden="true"></span>
+            <span class="video-control-label" data-hero-video-play-label>Pause</span>
+          </button>
+          <button type="button" data-hero-video-mute aria-label="Mute trailer" title="Mute trailer">
+            <span class="video-control-icon volume-icon" aria-hidden="true"></span>
+            <span class="video-control-label" data-hero-video-mute-label>Mute</span>
+          </button>
+        </div>
+      </div>
 
       <div class="hero-copy">
         <p class="pixel-label">A New Platano Team adventure</p>
@@ -51,7 +62,9 @@
         <p class="hero-lead">Guide John across a dangerous island, battle monsters, solve puzzles, and uncover the source of a mysterious anomaly.</p>
         <div class="hero-actions">
           <a class="dl-button primary" href="https://store.steampowered.com/app/3224490/Dark_Light/" target="_blank" rel="noopener">Wishlist on Steam <span>&nearr;</span></a>
-          <a class="dl-button secondary" href="#trailer">Watch the trailer <span>&#9654;</span></a>
+          <button class="dl-button secondary hero-trailer-toggle" type="button" data-hero-trailer-toggle aria-controls="hero-trailer" aria-pressed="false">
+            <span class="hero-trailer-label">Watch the trailer</span><span class="hero-trailer-icon" aria-hidden="true">&#9654;</span>
+          </button>
         </div>
       </div>
 

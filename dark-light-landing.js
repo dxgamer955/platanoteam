@@ -5,6 +5,21 @@ const island = document.querySelector(".dl-hero");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const LOGICAL_SCENE_WIDTH = 288;
 const LOGICAL_SCENE_HEIGHT = 162;
+const TRAILER_VIDEO_ID = "GKxuPGD6U3o";
+
+const createTrailerIframe = ({ background = false } = {}) => {
+  const iframe = document.createElement("iframe");
+  const backgroundParameters = background
+    ? `&controls=0&rel=0&modestbranding=1&enablejsapi=1&origin=${encodeURIComponent(window.location.origin)}`
+    : "";
+  iframe.src = `https://www.youtube.com/embed/${TRAILER_VIDEO_ID}?autoplay=1&playsinline=1${backgroundParameters}`;
+  iframe.title = "Dark Light official trailer on YouTube";
+  iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+  iframe.referrerPolicy = "strict-origin-when-cross-origin";
+  iframe.allowFullscreen = true;
+  if (background) iframe.tabIndex = -1;
+  return iframe;
+};
 
 if (menuButton && links) {
   menuButton.addEventListener("click", () => {
@@ -190,19 +205,106 @@ if (island) {
   }
 }
 
+const heroTrailer = document.querySelector("[data-hero-trailer]");
+const heroTrailerToggle = document.querySelector("[data-hero-trailer-toggle]");
+if (island && heroTrailer && heroTrailerToggle) {
+  const trailerLabel = heroTrailerToggle.querySelector(".hero-trailer-label");
+  const trailerIcon = heroTrailerToggle.querySelector(".hero-trailer-icon");
+  const videoPlayButton = heroTrailer.querySelector("[data-hero-video-play]");
+  const videoPlayIcon = heroTrailer.querySelector("[data-hero-video-play-icon]");
+  const videoPlayLabel = heroTrailer.querySelector("[data-hero-video-play-label]");
+  const videoMuteButton = heroTrailer.querySelector("[data-hero-video-mute]");
+  const videoMuteLabel = heroTrailer.querySelector("[data-hero-video-mute-label]");
+  let cleanupTimer;
+  let videoPlaying = true;
+  let videoMuted = false;
+
+  const sendVideoCommand = (command) => {
+    const iframe = heroTrailer.querySelector("iframe");
+    if (!iframe?.contentWindow) return;
+    iframe.contentWindow.postMessage(JSON.stringify({
+      event: "command",
+      func: command,
+      args: []
+    }), "*");
+  };
+
+  const syncVideoControls = () => {
+    videoPlayIcon.classList.toggle("is-paused", !videoPlaying);
+    videoPlayLabel.textContent = videoPlaying ? "Pause" : "Play";
+    videoPlayButton.setAttribute("aria-label", videoPlaying ? "Pause trailer" : "Play trailer");
+    videoPlayButton.title = videoPlaying ? "Pause trailer" : "Play trailer";
+    videoPlayButton.setAttribute("aria-pressed", String(!videoPlaying));
+    videoMuteLabel.textContent = videoMuted ? "Unmute" : "Mute";
+    videoMuteButton.setAttribute("aria-label", videoMuted ? "Unmute trailer" : "Mute trailer");
+    videoMuteButton.title = videoMuted ? "Unmute trailer" : "Mute trailer";
+    videoMuteButton.setAttribute("aria-pressed", String(videoMuted));
+    videoMuteButton.classList.toggle("is-muted", videoMuted);
+  };
+
+  const setHeroTrailer = (active) => {
+    clearTimeout(cleanupTimer);
+    document.body.classList.toggle("hero-trailer-active", active);
+
+    if (active) {
+      const iframe = createTrailerIframe({ background: true });
+      videoPlaying = true;
+      videoMuted = false;
+      syncVideoControls();
+      heroTrailer.classList.remove("video-ready");
+      iframe.addEventListener("load", () => {
+        heroTrailer.classList.add("video-ready");
+        sendVideoCommand("playVideo");
+      }, { once: true });
+      heroTrailer.prepend(iframe);
+      requestAnimationFrame(() => island.classList.add("trailer-active"));
+    } else {
+      island.classList.remove("trailer-active");
+      cleanupTimer = setTimeout(() => {
+        if (!island.classList.contains("trailer-active")) {
+          heroTrailer.classList.remove("video-ready");
+          heroTrailer.querySelector("iframe")?.remove();
+        }
+      }, reduceMotion.matches ? 0 : 700);
+    }
+
+    heroTrailer.setAttribute("aria-hidden", String(!active));
+    heroTrailerToggle.setAttribute("aria-pressed", String(active));
+    trailerLabel.textContent = active ? "Back to banner" : "Watch the trailer";
+    trailerIcon.textContent = active ? "\u21B6" : "\u25B6";
+  };
+
+  heroTrailerToggle.addEventListener("click", () => {
+    setHeroTrailer(!island.classList.contains("trailer-active"));
+  });
+
+  videoPlayButton.addEventListener("click", () => {
+    videoPlaying = !videoPlaying;
+    sendVideoCommand(videoPlaying ? "playVideo" : "pauseVideo");
+    syncVideoControls();
+  });
+
+  videoMuteButton.addEventListener("click", () => {
+    videoMuted = !videoMuted;
+    sendVideoCommand(videoMuted ? "mute" : "unMute");
+    syncVideoControls();
+  });
+
+  addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && island.classList.contains("trailer-active")) {
+      setHeroTrailer(false);
+      heroTrailerToggle.focus();
+    }
+  });
+}
+
 const trailer = document.querySelector("[data-trailer]");
 if (trailer) {
   const playTrailer = trailer.querySelector(".trailer-play");
   const trailerMedia = trailer.querySelector(".trailer-media");
 
   playTrailer.addEventListener("click", () => {
-    const iframe = document.createElement("iframe");
-    iframe.src = "https://www.youtube.com/embed/GKxuPGD6U3o?autoplay=1&playsinline=1";
-    iframe.title = "Dark Light official trailer on YouTube";
-    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-    iframe.referrerPolicy = "strict-origin-when-cross-origin";
-    iframe.allowFullscreen = true;
-    trailerMedia.replaceChildren(iframe);
+    trailerMedia.replaceChildren(createTrailerIframe());
   }, { once: true });
 }
 
