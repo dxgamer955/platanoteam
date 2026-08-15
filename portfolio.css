@@ -37,6 +37,26 @@
 .skill-ti:hover .skill-logo img{transform:none}
 @media(max-width:520px){.skill-ti .skill-logo{width:42px;height:42px}.skill-ti .skill-logo img{width:178px;height:66px}}
 
+/* In-house PlatanoTeam technology and production tools. */
+.platano-tools{padding-block:130px;border-top:1px solid var(--portfolio-line)}
+.platano-tools .plain-heading{margin-bottom:28px}
+.platano-tools-intro{max-width:660px;margin:0 0 55px 35%;color:#9899a1;line-height:1.75}
+.platano-tools-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--portfolio-line);border-left:1px solid var(--portfolio-line)}
+.platano-tool-card{min-height:300px;display:flex;flex-direction:column;justify-content:space-between;gap:38px;padding:26px;border-right:1px solid var(--portfolio-line);border-bottom:1px solid var(--portfolio-line);background:#15161a;transition:background .2s,transform .2s}
+.platano-tool-card:hover{background:#1b1c21;transform:translateY(-3px)}
+.platano-tool-mark{width:78px;height:78px;display:grid;place-items:center;border:1px solid #3b3c42;background:#0f1013;color:var(--green);font:700 1.15rem "Space Grotesk",sans-serif;letter-spacing:0;overflow:hidden}
+.platano-tool-mark img{display:block;width:100%;height:100%;object-fit:contain;padding:9px;box-sizing:border-box;transition:transform .2s}
+.platano-tool-mark.engine-mark{width:132px;height:88px}
+.platano-tool-mark.engine-mark img{padding:5px}
+.platano-tool-card:hover .platano-tool-mark img{transform:scale(1.06)}
+.platano-tool-card span{display:block;margin-bottom:18px;color:#686970;font:500 .62rem "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.1em}
+.platano-tool-card h3{margin:0 0 14px;font-size:1.35rem;line-height:1.05}
+.platano-tool-card p{margin:0;color:#9d9ea5;font-size:.9rem;line-height:1.7}
+@media(max-width:1100px){.platano-tools-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:980px){.platano-tools-grid{grid-template-columns:1fr 1fr}.platano-tools-intro{margin-left:0}.platano-tool-card:last-child{grid-column:auto}}
+@media(max-width:700px){.platano-tools{padding-block:85px}.platano-tool-card{min-height:260px}}
+@media(max-width:560px){.platano-tools-grid{grid-template-columns:1fr}.platano-tool-card:last-child{grid-column:auto}.platano-tool-mark{width:62px;height:62px}.platano-tool-mark.engine-mark{width:116px;height:78px}}
+
 /* The fifth curiosity spans the grid so the section remains balanced. */
 .notes-grid>.music-note{grid-column:1/-1;padding-left:0;border-right:0}
 @media(max-width:700px){.notes-grid>.music-note{grid-column:auto}}
@@ -49,3 +69,22 @@
 .contact>.contact-groups a{color:#96979e;font-size:.78rem;border-bottom:1px solid #4a4b51}
 @media(max-width:800px){.contact>.contact-groups{grid-template-columns:1fr 1fr}.contact-group:last-child{grid-column:1/-1}}
 @media(max-width:520px){.contact>.contact-groups{grid-template-columns:1fr}.contact-group:last-child{grid-column:auto}}
+
+/* Smaller personal and learning projects kept outside the main case studies. */
+.project-archives{padding-block:130px;border-top:1px solid var(--portfolio-line)}
+.project-archives .plain-heading{margin-bottom:28px}
+.archives-intro{max-width:680px;margin:0 0 55px 35%;color:#9899a1;line-height:1.75}
+.archive-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--portfolio-line);border-left:1px solid var(--portfolio-line)}
+.archive-card{min-height:100%;display:flex;flex-direction:column;background:#15161a;border-right:1px solid var(--portfolio-line);border-bottom:1px solid var(--portfolio-line);transition:background .2s,transform .2s}
+.archive-card:hover{background:#1b1c21;transform:translateY(-3px)}
+.archive-card figure{margin:0;background:#0b0c0f;border-bottom:1px solid var(--portfolio-line);overflow:hidden}
+.archive-card img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;filter:saturate(.9) contrast(.96);transition:transform .3s,filter .3s}
+.archive-card:hover img{transform:scale(1.025);filter:saturate(1.05) contrast(1)}
+.archive-copy{display:flex;flex:1;flex-direction:column;padding:22px}
+.archive-copy time{color:var(--green);font:500 .68rem "IBM Plex Mono",monospace}
+.archive-copy h3{margin:16px 0 12px;font-size:1.25rem;line-height:1.05;letter-spacing:-.035em}
+.archive-copy p{margin:0;color:#9d9ea5;font-size:.86rem;line-height:1.65}
+.archive-copy span{width:max-content;max-width:100%;margin-top:auto;padding:22px 0 0;color:#66676f;font:500 .62rem "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.08em}
+@media(max-width:980px){.archive-grid{grid-template-columns:repeat(2,1fr)}.archives-intro{margin-left:0}}
+@media(max-width:700px){.project-archives{padding-block:85px}.archive-copy{padding:18px}.archive-copy h3{font-size:1.12rem}}
+@media(max-width:560px){.archive-grid{grid-template-columns:1fr}.archive-card img{aspect-ratio:16/9}}
