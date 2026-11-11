@@ -12,3 +12,7 @@
 /* Third-party trademark disclosure for Nintendo DS homebrew pages. */
 footer .trademark-notice{grid-column:1/-1;max-width:760px;margin:0 auto;color:#686872;font-size:.66rem;line-height:1.55;text-align:center}
 footer p.trademark-notice:last-child{text-align:center}
+
+/* Home labels removed: keep navigation and the lab section aligned. */
+.archive-home .nav-links{grid-column:-2/-1}
+.archive-home .menu-toggle{grid-column:-2/-1}

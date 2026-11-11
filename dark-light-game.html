@@ -7,11 +7,11 @@
   <meta name="description" content="Dark Light is a story-driven pixel-art platformer adventure. Explore an island, battle monsters, and uncover a mysterious anomaly.">
   <meta property="og:title" content="Dark Light - Platano Team">
   <meta property="og:description" content="Guide John through a dangerous island, battle monsters, solve puzzles, and uncover the anomaly hidden in the darkness.">
-  <meta property="og:image" content="games/Dark-Light/DL_Banner_2026.png">
+  <meta property="og:image" content="games/Dark-Light/DL_Banner_2026.png?v=16de9bd2ef73">
   <meta property="og:type" content="website">
   <title>Dark Light - Platano Team</title>
   <link rel="icon" type="image/jpeg" href="games/Dark-Light/favicon.jpg">
-  <link rel="stylesheet" href="dark-light-landing.css">
+  <link rel="stylesheet" href="dark-light-landing.css?v=4">
 </head>
 <body>
   <header class="dl-header" id="top">
@@ -56,14 +56,16 @@
       </div>
 
       <div class="hero-copy">
-        <p class="pixel-label">A New Platano Team adventure</p>
-        <img class="hero-logo" src="games/Dark-Light/DL_TITLE_BIG.png" alt="Dark Light">
+        <div class="hero-branding">
+          <p class="pixel-label">A New Platano Team adventure</p>
+          <img class="hero-logo" src="games/Dark-Light/DL_TITLE_BIG.png?v=53feb5711f1b" alt="Dark Light">
+        </div>
         <!---<h1 id="hero-title">Face the dark.<br>Find your light.</h1>--->
         <p class="hero-lead">Guide John across a dangerous island, battle monsters, solve puzzles, and uncover the source of a mysterious anomaly.</p>
         <div class="hero-actions">
-          <a class="dl-button primary" href="https://store.steampowered.com/app/3224490/Dark_Light/" target="_blank" rel="noopener">Wishlist on Steam <span>&nearr;</span></a>
+          <a class="dl-button primary" href="https://store.steampowered.com/app/3224490/Dark_Light/" target="_blank" rel="noopener">Wishlist on Steam </a>
           <button class="dl-button secondary hero-trailer-toggle" type="button" data-hero-trailer-toggle aria-controls="hero-trailer" aria-pressed="false">
-            <span class="hero-trailer-label">Watch the trailer</span><span class="hero-trailer-icon" aria-hidden="true">&#9654;</span>
+            <span class="hero-trailer-label">Watch the trailer</span>
           </button>
         </div>
       </div>
@@ -80,7 +82,7 @@
           </div>
 
           <figure class="world-art reveal">
-            <img src="games/Dark-Light/DL_Banner_2026.png" alt="Dark Light island, moon, and castle">
+            <img src="games/Dark-Light/DL_Banner_2026.png?v=16de9bd2ef73" alt="Dark Light island, moon, and castle">
             <figcaption>Something waits beyond the light.</figcaption>
           </figure>
         </div>
@@ -115,13 +117,12 @@
           <div class="trailer-media">
             <img src="games/Dark-Light/DL_Trailer_YouTube.jpg" alt="Dark Light official trailer preview">
             <button class="trailer-play" type="button" aria-label="Play the official Dark Light trailer">
-              <span aria-hidden="true">&#9654;</span>
               <strong>Play official trailer</strong>
             </button>
           </div>
           <figcaption>
             <span>Official trailer / YouTube</span>
-            <a href="https://www.youtube.com/watch?v=GKxuPGD6U3o" target="_blank" rel="noopener">Open on YouTube &nearr;</a>
+            <a href="https://www.youtube.com/watch?v=GKxuPGD6U3o" target="_blank" rel="noopener">Open on YouTube</a>
           </figcaption>
         </figure>
       </div>
@@ -140,7 +141,7 @@
           <audio id="dl-audio" preload="metadata" src="games/Dark-Light/DL-MUSIC/Title-Song.mp3"></audio>
           <div class="player-main">
             <div class="player-top">
-              <button class="player-toggle" type="button" aria-label="Play Title Song"><span aria-hidden="true">&#9654;</span></button>
+              <button class="player-toggle" type="button" aria-label="Play Title Song"><span aria-hidden="true">Play</span></button>
               <div class="now-playing">
                 <p>Now playing</p>
                 <h3>Title Song</h3>
@@ -176,19 +177,19 @@
         <div class="character-grid">
           <button class="character-card character-select john reveal" type="button" data-roster-number="01" data-character-name="John" data-character-image="games/Dark-Light/DL_CHAR_john.png" data-character-theme="john" aria-label="View John">
             <div class="character-image"><img src="games/Dark-Light/DL_CHAR_john.png" alt="John from Dark Light"></div>
-            <div class="character-name"><span>Meet John</span><h3>John</h3><i>&nearr;</i></div>
+            <div class="character-name"><span>Meet John</span><h3>John</h3><i aria-hidden="true"></i></div>
           </button>
           <button class="character-card character-select cleo reveal" type="button" data-roster-number="02" data-character-name="Cleo" data-character-image="games/Dark-Light/DL_CHAR_cleo.png" data-character-theme="cleo" aria-label="View Cleo">
             <div class="character-image"><img src="games/Dark-Light/DL_CHAR_cleo.png" alt="Cleo from Dark Light"></div>
-            <div class="character-name"><span>Meet Cleo</span><h3>Cleo</h3><i>&nearr;</i></div>
+            <div class="character-name"><span>Meet Cleo</span><h3>Cleo</h3><i aria-hidden="true"></i></div>
           </button>
           <button class="character-card character-select clare reveal" type="button" data-roster-number="03" data-character-name="Clare" data-character-image="games/Dark-Light/DL_CHAR_clare.png" data-character-theme="clare" aria-label="View Clare">
             <div class="character-image"><img src="games/Dark-Light/DL_CHAR_clare.png" alt="Clare from Dark Light"></div>
-            <div class="character-name"><span>Meet Clare</span><h3>Clare</h3><i>&nearr;</i></div>
+            <div class="character-name"><span>Meet Clare</span><h3>Clare</h3><i aria-hidden="true"></i></div>
           </button>
           <button class="character-card character-select claudia reveal" type="button" data-roster-number="04" data-character-name="Claudia" data-character-image="games/Dark-Light/DL_CHAR_claudia.png" data-character-theme="claudia" aria-label="View Claudia">
             <div class="character-image"><img src="games/Dark-Light/DL_CHAR_claudia.png" alt="Claudia from Dark Light"></div>
-            <div class="character-name"><span>Meet Claudia</span><h3>Claudia</h3><i>&nearr;</i></div>
+            <div class="character-name"><span>Meet Claudia</span><h3>Claudia</h3><i aria-hidden="true"></i></div>
           </button>
           <article class="character-card mystery mystery-gray reveal" data-roster-number="05" aria-label="Unknown gray Dark Light character">
             <div class="character-image"><div class="question-mark" aria-hidden="true">?</div><p>Another face waits.</p></div>
@@ -245,7 +246,7 @@
               <p>He never planned to be a hero. He simply refuses to stop moving.</p>
             </div>
           </div>
-          <form method="dialog"><button type="submit">&larr; Back to characters</button></form>
+          <form method="dialog"><button type="submit">Back to characters</button></form>
         </div>
       </div>
     </dialog>
@@ -256,7 +257,7 @@
         <div class="wishlist-copy reveal">
           <h2 id="wishlist-title">Keep a light<br>on for us.</h2>
           <p>Add Dark Light to your Steam wishlist to follow development and receive a notification when it launches.</p>
-          <a class="dl-button primary" href="https://store.steampowered.com/app/3224490/Dark_Light/" target="_blank" rel="noopener">Open Steam page <span>&nearr;</span></a>
+          <a class="dl-button primary" href="https://store.steampowered.com/app/3224490/Dark_Light/" target="_blank" rel="noopener">Open Steam page </a>
         </div>
         <div class="steam-panel reveal">
           <p>STEAM / APP 3224490</p>
@@ -272,6 +273,6 @@
     <p>&copy; <span id="dl-year">2026</span> Platano Team.</p>
   </footer>
 
-  <script src="dark-light-landing.js"></script>
+  <script src="dark-light-landing.js?v=2"></script>
 </body>
 </html>

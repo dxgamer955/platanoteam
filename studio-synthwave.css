@@ -359,3 +359,25 @@ body.synthwave-site::after{content:"";position:fixed;inset:0;z-index:1000;pointe
 .synthwave-site.page-portfolio :is(.skill-three,.skill-gamemaker,.skill-github,.skill-unity,.skill-6502) .skill-logo img{
   filter:brightness(0) invert(1) drop-shadow(0 0 7px #ffffff26)!important;
 }
+
+/* The homepage lab section now has copy and one compact action. */
+.synthwave-site.archive-home .workbench-note{grid-template-columns:minmax(0,1fr) 180px;gap:clamp(28px,4vw,50px)}
+.synthwave-site.archive-home .workbench-note>div{min-width:0}
+.synthwave-site.archive-home .workbench-note>a{width:180px;min-width:0;min-height:64px;justify-self:end}
+@media(max-width:800px){
+  .synthwave-site.archive-home .workbench-note{grid-template-columns:minmax(0,1fr)}
+  .synthwave-site.archive-home .workbench-note>a{width:100%;justify-self:stretch}
+}
+
+/* Pages without introductory labels retain the shared navigation grid. */
+.labels-cleaned .nav-links,.labels-cleaned .menu-toggle{grid-column:-2/-1}
+/* Keep useful project states and team roles readable without green micro-headings. */
+.labels-cleaned :is(.project-meta>span,.wip-card span,.member-details>span){color:var(--pt-muted);text-transform:none;letter-spacing:normal}
+/* Gallery controls use words rather than decorative characters. */
+.labels-cleaned .lightbox{grid-template-columns:100px minmax(0,1fr) 100px;gap:12px}
+.labels-cleaned .lightbox button{width:88px;height:44px;border-radius:0;font-size:.8rem;font-weight:600}
+@media(max-width:600px){
+  .labels-cleaned .lightbox{grid-template-columns:minmax(0,1fr);padding:75px 15px 85px}
+  .labels-cleaned .lightbox figure img{max-height:65vh}
+  .labels-cleaned .lightbox figcaption{text-align:center;font-size:.85rem}
+}

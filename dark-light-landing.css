@@ -1644,3 +1644,11 @@ body.hero-trailer-active .dl-header {
   .dl-header { position: absolute; }
   .chapter-section { break-inside: auto; }
 }
+
+/* Text labels keep the music control clear without symbolic characters. */
+.player-toggle span{margin-left:0;font-size:12px;font-weight:700}
+
+/* Center the introduction over the logo at every responsive logo size. */
+.hero-branding{width:fit-content;max-width:100%}
+.hero-branding .pixel-label{text-align:center;font-size:clamp(10px,1vw,11px);line-height:1.5}
+.hero-branding .hero-logo{margin-top:16px}

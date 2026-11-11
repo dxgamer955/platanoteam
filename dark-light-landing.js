@@ -209,7 +209,6 @@ const heroTrailer = document.querySelector("[data-hero-trailer]");
 const heroTrailerToggle = document.querySelector("[data-hero-trailer-toggle]");
 if (island && heroTrailer && heroTrailerToggle) {
   const trailerLabel = heroTrailerToggle.querySelector(".hero-trailer-label");
-  const trailerIcon = heroTrailerToggle.querySelector(".hero-trailer-icon");
   const videoPlayButton = heroTrailer.querySelector("[data-hero-video-play]");
   const videoPlayIcon = heroTrailer.querySelector("[data-hero-video-play-icon]");
   const videoPlayLabel = heroTrailer.querySelector("[data-hero-video-play-label]");
@@ -271,7 +270,6 @@ if (island && heroTrailer && heroTrailerToggle) {
     heroTrailer.setAttribute("aria-hidden", String(!active));
     heroTrailerToggle.setAttribute("aria-pressed", String(active));
     trailerLabel.textContent = active ? "Back to banner" : "Watch the trailer";
-    trailerIcon.textContent = active ? "\u21B6" : "\u25B6";
   };
 
   heroTrailerToggle.addEventListener("click", () => {
@@ -465,7 +463,7 @@ if (musicPlayer) {
   const updatePlayState = () => {
     const playing = !audio.paused;
     toggle.classList.toggle("playing", playing);
-    toggleIcon.textContent = playing ? "II" : "\u25b6";
+    toggleIcon.textContent = playing ? "Pause" : "Play";
     toggle.setAttribute("aria-label", `${playing ? "Pause" : "Play"} ${title.textContent}`);
   };
 

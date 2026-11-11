@@ -1,0 +1,9 @@
+DentalVR Training
+
+An integrated VR dental training platform with four procedures, free practice and assigned test modes, scoring, role-based web dashboards, and synchronized results.
+[TAG] ACADEMIC PROJECT
+,
+Old Netflix (Movie Rental Web App)
+
+A connected web and Android movie-rental platform with authentication, role-based access, catalog search, personal queues, viewing history, and shared MySQL data.
+[TAG] ACADEMIC PROJECT
